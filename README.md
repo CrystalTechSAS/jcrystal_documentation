@@ -1,13 +1,13 @@
-# jcrystal
-_jcrystal_ es un framework de generación de codigo, para aplicaciones web cuyo principal objetivo es minimizar la rescritura de estructuras de datos, logica de negocio y sintaxis de los servicios entre el backend y los distintos frontend que puede tener la aplicación.
+# jCrystal
+_jCrystal_ es un framework de generación de codigo, para aplicaciones web cuyo principal objetivo es minimizar la rescritura de estructuras de datos, logica de negocio y sintaxis de los servicios entre el backend y los distintos frontend que puede tener la aplicación.
 
 ## Generalidades
-_jcrystal_ que permite:
+_jCrystal_ que permite:
 - A partir de una definición de entidades, generar metodos de consulta para las mismas
 - A partir de una definición de alto nivel de un servicio, generar Servlets que lo atiendad, y conectores para distintos tipos de clientes.
 - Validación de usuarios.
 
-_jcrystal_ esta escrito en Java, y esta hecho para funcionar sobre Google App Engine con *XXXXX* como base de datos.
+_jCrystal_ esta escrito en Java, y esta hecho para funcionar sobre Google App Engine con *XXXXX* como base de datos.
 
 El backend generado funciona con Servlets de Java EE.
 
@@ -25,7 +25,7 @@ Sin embargo en la mayoria de casos la capa de logica es prescindible, y la capa 
 
 ## En detalle
 ### Entidades
-Las entidades en _jcrystal_ son clases que se almacenaran en una tabla en la base de datos, para marcarlas se usa la anotación `@Entidad`
+Las entidades en _jCrystal_ son clases que se almacenaran en una tabla en la base de datos, para marcarlas se usa la anotación `@Entidad`
 #### Campos
 `@EntityProperty`
 
@@ -55,7 +55,7 @@ Para poder filtrar una _Entidad_ por un campo este debe estar indexado, esto se 
 ### Tokens
 
 ## Configuración inicial
-_jcrystal_ esta hecho para utilizarse desde *Eclipse*, los pasos para crear un proyecto de _jcrystal_ en Eclipse son:
+_jCrystal_ esta hecho para utilizarse desde *Eclipse*, los pasos para crear un proyecto de _jCrystal_ en Eclipse son:
 - Instalar Eclipse
 - Instala [el plugin de Cloud Tools para Eclipse](https://cloud.google.com/eclipse/docs/quickstart)
 - Crear un proyecto de tipo *XXXXX*
@@ -64,10 +64,10 @@ _jcrystal_ esta hecho para utilizarse desde *Eclipse*, los pasos para crear un p
 - Poner en la raiz del proyecto el archivo `jcrystal.jar`
 - Crear el archivo de configuración según se describe a continuación.
 
-La configuración de _jcrystal_ debe estar en el paquete por defecto del proyecto, en una clase llamada `JCrystalConfig`, adicionalmente como una salvaguarda para que _jcrystal_ se ejecute debe exister en la carpeta raiz del proyecto un archivo llamado `jcrystal.txt`.
+La configuración de _jCrystal_ debe estar en el paquete por defecto del proyecto, en una clase llamada `JCrystalConfig`, adicionalmente como una salvaguarda para que _jCrystal_ se ejecute debe exister en la carpeta raiz del proyecto un archivo llamado `jcrystal.txt`.
 
 El archivo `JCrystalConfig.java` debe tener un metodo estatico publico sin retorno, donde se define entre otras cosas:
-- La IP del servidor de generación de _jcrystal_
+- La IP del servidor de generación de _jCrystal_
 - El paquete del proyecto donde se crearan las *clases auxiliares*
 - El paquete del proyecto donde se crearan los servlets
 - La definición de los clientes para los que se generara una capa de conexión.
@@ -124,7 +124,7 @@ Adicionalmente se debe incluir la libreria XXXXX en el modulo principal.
 *GUARDAR*
 
 ### Implementando servicios
-Las clases donde se implementan servicios en _jcrystal_  se llaman *managers*, para implementar una de estas clases se deben cumplir dos condiciones:
+Las clases donde se implementan servicios en _jCrystal_  se llaman *managers*, para implementar una de estas clases se deben cumplir dos condiciones:
 - El nombre de la clase debe comenzar por `Manager`
 - La clase debe estar en un paquete que en algún punto de su ruta contenga una carpeta `controllers` p.e. `app.controllers.auth`
 
@@ -161,7 +161,7 @@ El metodo asserT se encuentra definido en el paquete `jcrystal.utils.ManagerUtil
 
 
 ### Fecha y hora
-Para el manejo de eventos temporales _jcrystal_ no usa los objetos nativos de cada plataforma sino que implementa en cada una las siguientes clases de utilidad:
+Para el manejo de eventos temporales _jCrystal_ no usa los objetos nativos de cada plataforma sino que implementa en cada una las siguientes clases de utilidad:
 - `CrystalDate`
 - `CrystalDateMilis`
 - `CrystalDateSeconds`
