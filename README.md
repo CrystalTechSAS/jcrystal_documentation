@@ -28,6 +28,11 @@ Sin embargo en la mayoria de casos la capa de logica es prescindible, y la capa 
 Las entidades en _jcrystal_ son clases que se almacenaran en una tabla en la base de datos, para marcarlas se usa la anotación `@Entidad`
 #### Campos
 `@EntityProperty`
+
+| Parametro     | Tipo          | Descripción  |
+| ------------- |-------------| -----|
+| indexed     | boolean | Indica si este campo esta indexado en la BD |
+
 final
 ##### Relaciones entre entidades
 `@Rel1to1`
@@ -50,6 +55,15 @@ Para poder filtrar una _Entidad_ por un campo este debe estar indexado, esto se 
 ### Tokens
 
 ## Configuración inicial
+_jcrystal_ esta hecho para utilizarse desde *Eclipse*, los pasos para crear un proyecto de _jcrystal_ en Eclipse son:
+- Instalar Eclipse
+- Instala [el plugin de Cloud Tools para Eclipse](https://cloud.google.com/eclipse/docs/quickstart)
+- Crear un proyecto de tipo *XXXXX*
+- Añadir en la carpeta  *XXXX* WEB-INF del proyecto los archivos `jCrystalUtils.jar` y `XXXXX`
+- Incluir los archivos anteriores en el _build path_
+- Poner en la raiz del proyecto el archivo `jcrystal.jar`
+- Crear el archivo de configuración según se describe a continuación.
+
 La configuración de _jcrystal_ debe estar en el paquete por defecto del proyecto, en una clase llamada `JCrystalConfig`, adicionalmente como una salvaguarda para que _jcrystal_ se ejecute debe exister en la carpeta raiz del proyecto un archivo llamado `jcrystal.txt`.
 
 El archivo `JCrystalConfig.java` debe tener un metodo estatico publico sin retorno, donde se define entre otras cosas:
@@ -114,7 +128,7 @@ Las clases donde se implementan servicios en _jcrystal_  se llaman *managers*, p
 - El nombre de la clase debe comenzar por `Manager`
 - La clase debe estar en un paquete que en algún punto de su ruta contenga una carpeta `controllers` p.e. `app.controllers.auth`
 
-#### La ruta del servicio
+#### La URL del servicio
 Cada uno de los metodos publicos y estaticos de la clase se convertira en la URL de un servicio respondido por dicho metodo, por este razón no se puede repetir el nombre de un metodo en una clase de servicio.
 
 La URL relativa del servicio resultante se construye a partir de:
@@ -129,7 +143,7 @@ Para que se generen los *endpoints* de los servicios para un determinado cliente
 - En la clase para abarcar todos los metodos del Manager.
 - En un metodo para abarcar solo ese metodo.
 
-#### Servicios de validación
+#### Servicios de autenticación
 
 #### Recibiendo datos por POST.
 
@@ -138,12 +152,12 @@ Para que se generen los *endpoints* de los servicios para un determinado cliente
 `ClientLevel`
 MIN BASIC DETAIL NONE
 ### El metodo asserT
-El metodo asserT se encuentra definido en el paquete `jcrystal.utils.ManagerUtils` y permite implementar validaciones en los metodos que retornan un texto, que sera visto por el cliente como un _popup_.
+El metodo asserT se encuentra definido en el paquete `jcrystal.utils.ManagerUtils` y permite implementar validaciones en los metodos que retornan un texto, que sera visto por el cliente como un _popup_.  El metodo recibe una condición y un mensaje, cuando la condicióm es falsa se arroja una excepción y se interrumpe la ejecución del metodo.
 
 | Parametro     | Tipo          | Descripción  |
-| ------------- |:-------------:| -----:|
-| condicion     | boolean | $1600 |
-| mensaje      | String      |   $12 |
+| ------------- |-------------| -----|
+| condicion     | boolean | Condición que se valida |
+| mensaje      | String      |   Mensaje que se envia si la condición es falsa |
 
 
 ### Fecha y hora
@@ -155,3 +169,6 @@ Para el manejo de eventos temporales _jcrystal_ no usa los objetos nativos de ca
 - `CrystalTime`
 - `CrystalTimeMilis`
 - `CrystalTimeSeconds`
+
+### Roles
+`@RolEnum` ids potencias de 2, mascaras
