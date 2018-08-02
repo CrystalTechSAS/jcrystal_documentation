@@ -62,6 +62,7 @@ _jCrystal_ esta hecho para utilizarse desde *Eclipse*, los pasos para crear un p
 - Añadir en la carpeta  *XXXX* WEB-INF del proyecto los archivos `jCrystalUtils.jar` y `XXXXX`
 - Incluir los archivos anteriores en el _build path_
 - Poner en la raiz del proyecto el archivo `jcrystal.jar`
+- En la configuración del proyecto en _Eclipse_ en la sección  _Java Compiler_ activar la opción *"Store information about method parameters (usable via reflection)"* (esto permite que los *endpoints* generados tengan nombres de parametros con significado)
 - Crear el archivo de configuración según se describe a continuación.
 
 La configuración de _jCrystal_ debe estar en el paquete por defecto del proyecto, en una clase llamada `JCrystalConfig`, adicionalmente como una salvaguarda para que _jCrystal_ se ejecute debe exister en la carpeta raiz del proyecto un archivo llamado `jcrystal.txt`.
