@@ -140,8 +140,8 @@ Cada uno de los metodos publicos y estaticos de la clase se convertira en la URL
 La URL relativa del servicio resultante se construye a partir de:
 - El nombre del subpaquete despues de la carpeta `controllers` p.e. `app.controllers.auth` ➡ `auth`
 - El nombre de la clase omitiendo el prefijo `Manager`p.e. `ManagerUser` ➡ `user`
-- El nombre del metodo p.e. `public static void create(...) {...}` ➡ `create`
-La URL resultante seria entonces `auth/user/create` relativa a la raiz del servicio definida en la configuración.
+- El nombre del metodo (palabras separadas por _underscore_ se convierten en otra parte de la ruta) p.e. `public static void admin_create(...) {...}` ➡ `admin/create`
+La URL resultante seria entonces `auth/user/admin/create` relativa a la raiz del servicio definida en la configuración.
 
 #### Generando *endpoints* para los clientes
 Para que se generen los *endpoints* de los servicios para un determinado cliente, se debe agregar una anotación de la forma `@<nombre_cliente>Client` donde nombre_cliente es uno de los definidos en el archivo de configuración de jCrystal.  Esta anotación puede colocarse:
@@ -195,3 +195,5 @@ ids potencias de 2, mascaras
 
 #### Temas pendientes
 - @CarbonCopy
+- @ListOption en los metodos de los managager `@ListOption(name="nueva membresía", icon="dollar-sign")`
+- @JsonString en los metodos de los managager
