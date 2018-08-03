@@ -26,12 +26,17 @@ Sin embargo en la mayoria de casos la capa de logica es prescindible, y la capa 
 ## En detalle
 ### Entidades
 Las entidades en _jCrystal_ son clases que se almacenaran en una tabla en la base de datos, para marcarlas se usa la anotación `@Entidad`
+
+Otras anotaciones que puede tener una entidad `@Entidad` son `@CarbonCopy`
+
 #### Campos
 `@EntityProperty`
 
 | Parametro     | Tipo          | Descripción  |
 | ------------- |-------------| -----|
 | indexed     | boolean | Indica si este campo esta indexado en la BD |
+| unique     | boolean | Indica si el valor de esta campo no puede repetirse entre objetos de la entidad *OJO: la capa de datos no hace respetar esto*|
+| editable     | boolean | ????? |
 
 final
 ##### Relaciones entre entidades
@@ -148,9 +153,20 @@ Para que se generen los *endpoints* de los servicios para un determinado cliente
 
 #### Recibiendo datos por POST.
 
+#### Campos obligatorios.
+Los campos obligatorios se indican con un underscore(_) al final del nombre del parametro, por ejemplo, el siguiente metodo:
+```java
+public static Token login(String email_, String password_) {
+	//...
+}
+```
+
 ## Utilidades
 ### Niveles de detalle
 `ClientLevel`
+
+### Niveles de error
+
 MIN BASIC DETAIL NONE
 ### El metodo asserT
 El metodo asserT se encuentra definido en el paquete `jcrystal.utils.ManagerUtils` y permite implementar validaciones en los metodos que retornan un texto, que sera visto por el cliente como un _popup_.  El metodo recibe una condición y un mensaje, cuando la condicióm es falsa se arroja una excepción y se interrumpe la ejecución del metodo.
@@ -172,4 +188,10 @@ Para el manejo de eventos temporales _jCrystal_ no usa los objetos nativos de ca
 - `CrystalTimeSeconds`
 
 ### Roles
-`@RolEnum` ids potencias de 2, mascaras
+Solo puede haber uno en toda la aplicación.
+`@RolEnum` 
+
+ids potencias de 2, mascaras
+
+#### Temas pendientes
+- @CarbonCopy
