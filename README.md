@@ -197,3 +197,6 @@ ids potencias de 2, mascaras
 - @CarbonCopy
 - @ListOption en los metodos de los managager `@ListOption(name="nueva membresía", icon="dollar-sign")`
 - @JsonString en los metodos de los managager
+- @RelMTo1 implica que el campo se puede filtrar
+- En el metodo generado `Entidad.PostNormal.validate` el metodo validate deberia aplicar las validaciones que se implementan en la entidad
+- Las tildes y las ñ no son toleradas
