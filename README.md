@@ -45,6 +45,9 @@ final
 `target="x"`
 `@RelMtoM`
 `small=true` menos de 4000
+
+Los campos de relación no tienen nivel por defecto.
+
 ##### Niveles de detalle
 
 ##### Enums como atributos de una entidad
@@ -114,6 +117,9 @@ import jcrystal.json.JsonLevel;
 
 public class JCrystalConfig {
 	public static void config(){
+		//Estas 4 configuraciones operan sobre los atributos estaticos de jcrystal.JCrystalConfig
+		JCRYSTAL_SERVER_IP =  "35.229.125.17";
+		SERVER_PORT = 80;
 		SERVER.setPackageInterfaces("myproject.servlets");
 		SERVER.setServletPackage("myproject.servlets");
 		
@@ -131,6 +137,8 @@ public class JCrystalConfig {
 	}
 }
 ```
+
+El puerto por defecto de jCrystal es el 80.
 
 ### Configuración adicional para Angular2
 Se debe crear el archivo de configuración en `src/util/app-configuration.ts` con el siguiente contenido
