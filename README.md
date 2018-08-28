@@ -267,3 +267,7 @@ Los iconos posibles son los proveidos por [jQuery Mobile](https://api.jquerymobi
 - En el metodo generado `Entidad.PostNormal.validate` el metodo validate deberia aplicar las validaciones que se implementan en la entidad
 - Las tildes y las ñ no son toleradas
 - `LongText` ~~es~~ era un tipo que remplaza String para textos largos
+- En Android se requiere que exista la clase aplication de la Aplicación.
+
+[App Engine Client For Google Cloud Storage](https://mvnrepository.com/artifact/com.google.appengine.tools/appengine-gcs-client)
+- Que a su vez requiere [Guava](https://mvnrepository.com/artifact/com.google.guava/guava)
