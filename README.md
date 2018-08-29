@@ -255,7 +255,7 @@ public static String flip(MiEntidad ent) {
 ```
 Este ejemplo cambia el valor de un flag booleano en el objeto `MiEntidad` y lo almacena, ademas retorna un mensaje que se presentara en la interfaz de administración web.
 
-Los iconos posibles son los proveidos por [jQuery Mobile](https://api.jquerymobile.com/icons/)
+Los iconos posibles son los proveidos por [jQuery UI](https://jqueryui.com/themeroller/)(Ver sección Framework Icons)
 
 ###### Ejemplo completo
 
