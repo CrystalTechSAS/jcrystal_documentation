@@ -271,3 +271,9 @@ Los iconos posibles son los proveidos por [jQuery UI](https://jqueryui.com/theme
 
 [App Engine Client For Google Cloud Storage](https://mvnrepository.com/artifact/com.google.appengine.tools/appengine-gcs-client)
 - Que a su vez requiere [Guava](https://mvnrepository.com/artifact/com.google.guava/guava)
+
+
+###### Cambios primero de septiembre
+- Ahora en la configuración (JCrystalConfig) se puede activar el modo debug del servidor con `SERVER.DEBUG = true;`, por defecto dicho modo esta desactivado.
+- SERVER.servlet_root_path = "";
+- 
