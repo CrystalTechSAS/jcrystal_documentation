@@ -1,10 +1,10 @@
 # jCrystal
-_jCrystal_ es un framework de generación de codigo, para aplicaciones web cuyo principal objetivo es minimizar la rescritura de estructuras de datos, logica de negocio y sintaxis de los servicios entre el backend y los distintos frontend que puede tener la aplicación.
+_jCrystal_ es un framework de generación de código, para aplicaciones web cuyo principal objetivo es minimizar la rescritura de estructuras de datos, lógica de negocio y sintaxis de los servicios entre el backend y los distintos frontend que puede tener la aplicación.
 
 ## Generalidades
 _jCrystal_ que permite:
-- A partir de una definición de entidades, generar metodos de consulta para las mismas
-- A partir de una definición de alto nivel de un servicio, generar Servlets que lo atiendad, y conectores para distintos tipos de clientes.
+- A partir de una definición de entidades, generar métodos de consulta para las mismas
+- A partir de una definición de alto nivel de un servicio, generar Servlets que lo atiendan, y conectores para distintos tipos de clientes.
 - Validación de usuarios.
 
 _jCrystal_ esta escrito en Java, y esta hecho para funcionar sobre Google App Engine con *XXXXX* como base de datos.
@@ -18,10 +18,10 @@ Los *endpoints* se pueden generar como:
 
 Las capas presentes en la arquitectura de jCrystal son:
 - Datos, mediante la definición de _Entidades_
-- Logica, mediante la definición de _Crystals_
+- Lógica, mediante la definición de _Crystals_
 - Web Services, mediante la definición de _Managers_
 - *Resources*
-Sin embargo en la mayoria de casos la capa de logica es prescindible, y la capa de los Web Services utiliza directamente la capa de datos.
+Sin embargo en la mayoría de casos la capa de lógica es prescindible, y la capa de los Web Services utiliza directamente la capa de datos.
 
 - [Entidades](Entidades.md)
 - [Servicios](Servicios.md)
@@ -54,7 +54,7 @@ Los campos de relación no tienen nivel por defecto.
 ##### Niveles de detalle
 
 ##### Enums como atributos de una entidad
-Cuando se usa un `enum` como atributo de una entidad, este debe tener un metodo estatico que devuelve un elemento a partir de un identificador entero con el nombre `fromId`.  El identificador se utiliza para transmitir la información y almacenarla en la base de datos.
+Cuando se usa un `enum` como atributo de una entidad, este debe tener un método estático que devuelve un elemento a partir de un identificador entero con el nombre `fromId`.  El identificador se utiliza para transmitir la información y almacenarla en la base de datos.
 
 Un ejemplo de un `enum` que puede ser usado como atributo en una entidad:
 ```java
@@ -75,11 +75,11 @@ public enum StatusType {
 }
 ```
 
-#### Indices
-Para poder filtrar una _Entidad_ por un campo este debe estar indexado, esto se logra con el parametro indexed colocado en true en la anotación `@EntityProperty` asi:
+#### Índices
+Para poder filtrar una _Entidad_ por un campo este debe estar indexado, esto se logra con el parámetro indexed colocado en true en la anotación `@EntityProperty` así:
 `@EntityProperty(indexed = true)`
 
-##### Indices complejos
+##### Índices complejos
 `@Index`
 
 ### Pseudoentidades
@@ -94,20 +94,20 @@ _jCrystal_ esta hecho para utilizarse desde *Eclipse*, los pasos para crear un p
 - Crear un proyecto de tipo *XXXXX*
 - Añadir en la carpeta  *XXXX* WEB-INF del proyecto los archivos `jCrystalUtils.jar` y `XXXXX`
 - Incluir los archivos anteriores en el _build path_
-- Poner en la raiz del proyecto el archivo `jcrystal.jar`
-- En la configuración del proyecto en _Eclipse_ en la sección  _Java Compiler_ activar la opción *"Store information about method parameters (usable via reflection)"* (esto permite que los *endpoints* generados tengan nombres de parametros con significado)
+- Poner en la raíz del proyecto el archivo `jcrystal.jar`
+- En la configuración del proyecto en _Eclipse_ en la sección  _Java Compiler_ activar la opción *"Store information about method parameters (usable via reflection)"* (esto permite que los *endpoints* generados tengan nombres de parámetros con significado)
 - Crear el archivo de configuración según se describe a continuación.
 
-La configuración de _jCrystal_ debe estar en el paquete por defecto del proyecto, en una clase llamada `JCrystalConfig`, adicionalmente como una salvaguarda para que _jCrystal_ se ejecute debe exister en la carpeta raiz del proyecto un archivo llamado `jcrystal.txt`.
+La configuración de _jCrystal_ debe estar en el paquete por defecto del proyecto, en una clase llamada `JCrystalConfig`, adicionalmente como una salvaguarda para que _jCrystal_ se ejecute debe existir en la carpeta raíz del proyecto un archivo llamado `jcrystal.txt`.
 
-El archivo `JCrystalConfig.java` debe tener un metodo estatico publico sin retorno, donde se define entre otras cosas:
+El archivo `JCrystalConfig.java` debe tener un método estático publico sin retorno, donde se define entre otras cosas:
 - La IP del servidor de generación de _jCrystal_
 - El paquete del proyecto donde se crearan las *clases auxiliares*
 - El paquete del proyecto donde se crearan los servlets
 - La definición de los clientes para los que se generara una capa de conexión.
-    - URL donde se accedera el servicio.
+    - URL donde se accederá el servicio.
     - Tipo de cliente (según `jcrystal.clients.ClientType`)
-    - Carpeta donde se generara el codigo.
+    - Carpeta donde se generara el código.
 ```java
 import static jcrystal.JCrystalConfig.*;
 
@@ -151,10 +151,10 @@ export class AppConfiguration{
 }
 ```
 #### Dependencias
-El codigo generado para typescript depende de estas librerias:
+El código generado para Typescript depende de estas librerías:
 - [moment](https://www.npmjs.com/package/moment)
 - [sweetalert](https://www.npmjs.com/package/sweetalert)
-Adicionalmente se debe incluir la libreria XXXXX en el modulo principal.
+Adicionalmente se debe incluir la librería XXXXX en el modulo principal.
 
 ## Usando jcrystal
 ### Mecanismo de consulta de la capa de datos
@@ -168,26 +168,26 @@ Las clases donde se implementan servicios en _jCrystal_  se llaman *managers*, p
 - La clase debe estar en un paquete que en algún punto de su ruta contenga una carpeta `controllers` p.e. `app.controllers.auth`
 
 #### La URL del servicio
-Cada uno de los metodos publicos y estaticos de la clase se convertira en la URL de un servicio respondido por dicho metodo, por este razón no se puede repetir el nombre de un metodo en una clase de servicio.
+Cada uno de los métodos públicos y estáticos de la clase se convertirá en la URL de un servicio respondido por dicho método, por este razón no se puede repetir el nombre de un método en una clase de servicio.
 
 La URL relativa del servicio resultante se construye a partir de:
-- El nombre del subpaquete despues de la carpeta `controllers` p.e. `app.controllers.auth` ➡ `auth`
+- El nombre del subpaquete después de la carpeta `controllers` p.e. `app.controllers.auth` ➡ `auth`
 - El nombre de la clase omitiendo el prefijo `Manager`p.e. `ManagerUser` ➡ `user`
-- El nombre del metodo (palabras separadas por _underscore_ se convierten en otra parte de la ruta) p.e. `public static void admin_create(...) {...}` ➡ `admin/create`
-La URL resultante seria entonces `auth/user/admin/create` relativa a la raiz del servicio definida en la configuración.
+- El nombre del método (palabras separadas por _underscore_ se convierten en otra parte de la ruta) p.e. `public static void admin_create(...) {...}` ➡ `admin/create`
+La URL resultante seria entonces `auth/user/admin/create` relativa a la raíz del servicio definida en la configuración.
 
 #### Generando *endpoints* para los clientes
 Para que se generen los *endpoints* de los servicios para un determinado cliente, se debe agregar una anotación de la forma `@<nombre_cliente>Client` donde nombre_cliente es uno de los definidos en el archivo de configuración de jCrystal.  Esta anotación puede colocarse:
-- En el [paquete](https://docs.oracle.com/javase/specs/jls/se8/html/jls-7.html) para abarcar todos los metodos de los Managers en el.
-- En la clase para abarcar todos los metodos del Manager.
-- En un metodo para abarcar solo ese metodo.
+- En el [paquete](https://docs.oracle.com/javase/specs/jls/se8/html/jls-7.html) para abarcar todos los métodos de los Managers en el.
+- En la clase para abarcar todos los métodos del Manager.
+- En un método para abarcar solo ese método.
 
 #### Servicios de autenticación
 
 #### Recibiendo datos por POST.
 
 #### Campos obligatorios.
-Los campos obligatorios se indican con un underscore(_) al final del nombre del parametro, por ejemplo, el siguiente metodo:
+Los campos obligatorios se indican con un underscore(_) al final del nombre del parámetro, por ejemplo, el siguiente método:
 ```java
 public static Token login(String email_, String password_) {
 	//...
@@ -202,7 +202,7 @@ public static Token login(String email_, String password_) {
 
 MIN BASIC DETAIL NONE
 ### El metodo asserT
-El metodo asserT se encuentra definido en el paquete `jcrystal.utils.ManagerUtils` y permite implementar validaciones en los metodos que retornan un texto, que sera visto por el cliente como un _popup_.  El metodo recibe una condición y un mensaje, cuando la condicióm es falsa se arroja una excepción y se interrumpe la ejecución del metodo.
+El método asserT se encuentra definido en el paquete `jcrystal.utils.ManagerUtils` y permite implementar validaciones en los metodos que retornan un texto, que será visto por el cliente como un _popup_.  El metodo recibe una condición y un mensaje, cuando la condicióm es falsa se arroja una excepción y se interrumpe la ejecución del metodo.
 
 | Parametro     | Tipo          | Descripción  |
 | ------------- |-------------| -----|
@@ -258,16 +258,16 @@ public static String flip(MiEntidad ent) {
 ```
 Este ejemplo cambia el valor de un flag booleano en el objeto `MiEntidad` y lo almacena, ademas retorna un mensaje que se presentara en la interfaz de administración web.
 
-Los iconos posibles son los proveidos por [jQuery UI](https://jqueryui.com/themeroller/)(Ver sección Framework Icons)
+Los iconos posibles son los provistos por [jQuery UI](https://jqueryui.com/themeroller/)(Ver sección Framework Icons)
 
 ###### Ejemplo completo
 
 #### Temas pendientes
 - @CarbonCopy
-- @ListOption en los metodos de los managager `@ListOption(name="nueva membresía", icon="dollar-sign")`
-- @JsonString en los metodos de los managager
+- @ListOption en los métodos de los manager `@ListOption(name="nueva membresía", icon="dollar-sign")`
+- @JsonString en los métodos de los manager
 - @RelMTo1 implica que el campo se puede filtrar
-- En el metodo generado `Entidad.PostNormal.validate` el metodo validate deberia aplicar las validaciones que se implementan en la entidad
+- En el metodo generado `Entidad.PostNormal.validate` el método validate debería aplicar las validaciones que se implementan en la entidad
 - Las tildes y las ñ no son toleradas
 - `LongText` ~~es~~ era un tipo que remplaza String para textos largos
 - En Android se requiere que exista la clase aplication de la Aplicación.
@@ -279,4 +279,4 @@ Los iconos posibles son los proveidos por [jQuery UI](https://jqueryui.com/theme
 ###### Cambios primero de septiembre
 - Ahora en la configuración (JCrystalConfig) se puede activar el modo debug del servidor con `SERVER.DEBUG = true;`, por defecto dicho modo esta desactivado.
 - SERVER.servlet_root_path = "";
-- 
+- @NombreDeLaEntidad.Meta.Order({NombreDeLaEntidad.Meta.M.campo1,NombreDeLaEntidad.Meta.M.campo2})
