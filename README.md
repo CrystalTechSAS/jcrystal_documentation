@@ -1,6 +1,3 @@
-[Entidades](Entidades.md)
-[Servicios](Servicios.md)
-
 # jCrystal
 _jCrystal_ es un framework de generación de codigo, para aplicaciones web cuyo principal objetivo es minimizar la rescritura de estructuras de datos, logica de negocio y sintaxis de los servicios entre el backend y los distintos frontend que puede tener la aplicación.
 
@@ -25,6 +22,9 @@ Las capas presentes en la arquitectura de jCrystal son:
 - Web Services, mediante la definición de _Managers_
 - *Resources*
 Sin embargo en la mayoria de casos la capa de logica es prescindible, y la capa de los Web Services utiliza directamente la capa de datos.
+
+- [Entidades](Entidades.md)
+- [Servicios](Servicios.md)
 
 ## En detalle
 ### Entidades
