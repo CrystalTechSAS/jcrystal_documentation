@@ -59,7 +59,7 @@ Las relaciones son campos de una entidad que la asocian con otra, pueden ser '1 
 Todas comparten los mismos parametros:
 - _name_(String): equivalente al parametro del mismo nombre en las propiedades
 - _target_(String): nombre del pseudo-campo que se creara en la entidad referida con la relación inversa.
-- _level_: equivalente al parametro _json_ en las propiedades
+- _keyLevel_: equivalente al parametro _json_ en las propiedades
 - _editable_(boolean): equivalente al parametro del mismo nombre en las propiedades
 
 Los campos de relacion, son indexados automaticamente y por tanto no tienen la opción _indexed_.
@@ -84,7 +84,7 @@ Adenas hay tres niveles especiales.
 - TOSTRING: el identificador y el resultado del metodo `toString()` de la entidad.
 - DEFAULT: **No debe usarse**, lo usa JCrystal internamente.
 
-En el caso de las propiedades el nombre del parametro es _json_, en el de las relaciones _level_.
+En el caso de las propiedades el nombre del parametro es _json_, en el de las relaciones _keyLevel_.
 
 _Nota:_ estos niveles de acceso se usan de manera paralela en los servicios.
 
