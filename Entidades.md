@@ -67,7 +67,9 @@ Los campos de relacion, son indexados automaticamente y por tanto no tienen la o
 ### Indices
 Como se indico previamente, las propiedades de una entidad pueden estar indexadas, en la caso de las propiedades de manera optativa y en el de las relaciones de manera automatica.
 
-Sin embargo, en algunos casos se necesita buscar registros no por el valor de un campo sino por la combinación de valores de varios campos
+Sin embargo, en algunos casos se necesita buscar registros no por el valor de un campo sino por la combinación de valores de varios campos, en estos casos la clase de la entidad se anota con `@EntityIndex` con los siguientes parametros:
+- _name_: nombre cual el cual se referira
+- _value_: Un arreglo de String con los nombres internos de los campos incluidos en el indice.
 
 ## Niveles de acceso
 Los campos de una entidad pueden tener niveles de detalle que especifican subconjuntos de campos con los que se puede presentar el objeto.  Un nivel de detalle incluye  todos los niveles inferiores, p.e: si se pide un objeto con nivel de detalle NORMAL, este uncluira tambien los campos con nivel MIN y BASIC.
