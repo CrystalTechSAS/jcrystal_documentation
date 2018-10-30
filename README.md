@@ -1,3 +1,6 @@
+[Entidades](Entidades.md)
+[Servicios](Servicios.md)
+
 # jCrystal
 _jCrystal_ es un framework de generación de codigo, para aplicaciones web cuyo principal objetivo es minimizar la rescritura de estructuras de datos, logica de negocio y sintaxis de los servicios entre el backend y los distintos frontend que puede tener la aplicación.
 
