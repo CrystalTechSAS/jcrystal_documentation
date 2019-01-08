@@ -92,9 +92,9 @@ _jCrystal_ esta hecho para utilizarse desde *Eclipse*, los pasos para crear un p
 - Instalar Eclipse
 - Instala [el plugin de Cloud Tools para Eclipse](https://cloud.google.com/eclipse/docs/quickstart)
 - Crear un proyecto de tipo *XXXXX*
-- Añadir en la carpeta  *XXXX* WEB-INF del proyecto los archivos `jCrystalUtils.jar` y `XXXXX`
+- Añadir en la carpeta  *XXXX* WEB-INF del proyecto los archivos [`jCrystalUtils.jar`](http://jcrystal.crystaltech.co/libs/jCrystalUtils.jar) y `XXXXX`
 - Incluir los archivos anteriores en el _build path_
-- Poner en la raíz del proyecto el archivo `jcrystal.jar`
+- Poner en la raíz del proyecto el archivo [`jcrystal.jar`](http://jcrystal.crystaltech.co/libs/jcrystal.jar)
 - En la configuración del proyecto en _Eclipse_ en la sección  _Java Compiler_ activar la opción *"Store information about method parameters (usable via reflection)"* (esto permite que los *endpoints* generados tengan nombres de parámetros con significado)
 - Crear el archivo de configuración según se describe a continuación.
 
