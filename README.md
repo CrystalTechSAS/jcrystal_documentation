@@ -88,6 +88,13 @@ Para poder filtrar una _Entidad_ por un campo este debe estar indexado, esto se 
 ### Tokens
 
 ## Configuración inicial
+
+### Eclipse plugin
+
+Instalar el plugin de jCrystal para Eclipse haciendo uso del site _http://jcrystal.crystaltech.co/plugin/_
+
+
+### Sin plugin
 _jCrystal_ esta hecho para utilizarse desde *Eclipse*, los pasos para crear un proyecto de _jCrystal_ en Eclipse son:
 - Instalar Eclipse
 - Instala [el plugin de Cloud Tools para Eclipse](https://cloud.google.com/eclipse/docs/quickstart)
