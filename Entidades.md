@@ -2,21 +2,65 @@
 ## Introducción
 Una entidad en JCrystal comienza como una clase con la definición de un objeto con ciertas propiedades, relaciones y comportamientos; las instancias de esta entidad se almacenaran en un tabla en un Datastore de GAE.
 
-### Nota sobre la generación del código
-Una parte del código que genera JCrystal para la entidad se crea dentro del mismo archivo de clase que contiene la definición.
+### Entidades
+Las entidades en _jCrystal_ son clases que se almacenaran en una tabla en la base de datos, para marcarlas se usa la anotación `@Entidad`
 
-Este código generado se coloca dentro de unos comentarios que delimitan la sección generada, para que en ejecuciones posteriores del generador de código se sobrescriba solo la región generada.
+Otras anotaciones que puede tener una entidad `@Entidad` son `@CarbonCopy`
 
-Un ejemplo:
+#### Campos
+`@EntityProperty`
+
+| Parametro     | Tipo          | Descripción  |
+| ------------- |-------------| -----|
+| indexed     | boolean | Indica si este campo esta indexado en la BD |
+| unique     | boolean | Indica si el valor de esta campo no puede repetirse entre objetos de la entidad *OJO: la capa de datos no hace respetar esto*|
+| editable     | boolean | ????? |
+
+final
+##### Relaciones entre entidades
+`@Rel1to1`
+`@RelMto1`
+`target="x"`
+`@RelMtoM`
+`small=true` menos de 4000
+
+Los campos de relación no tienen nivel por defecto.
+
+##### Niveles de detalle
+
+##### Enums como atributos de una entidad
+Cuando se usa un `enum` como atributo de una entidad, este debe tener un método estático que devuelve un elemento a partir de un identificador entero con el nombre `fromId`.  El identificador se utiliza para transmitir la información y almacenarla en la base de datos.
+
+Un ejemplo de un `enum` que puede ser usado como atributo en una entidad:
 ```java
-@Entidad
-public class Room {
-  //Aqui se encuentra la especificación.
-/* GEN */
- //Aqui se encuentra el codigó generado.
-/* END */
+public enum StatusType {
+	PENDING(1),CONNECTING(2),COMPLETED(3);
+	public final int id;
+	private StatusType(int id) {
+		this.id = id;
+	}
+	public static StatusType fromId(int id) {
+		for (StatusType val: StatusType.values()) {
+			if (val.id==id) {
+				return val;
+			}
+		}
+		return null;
+	}
 }
 ```
+
+#### Índices
+Para poder filtrar una _Entidad_ por un campo este debe estar indexado, esto se logra con el parámetro indexed colocado en true en la anotación `@EntityProperty` así:
+`@EntityProperty(indexed = true)`
+
+##### Índices complejos
+`@Index`
+
+### Pseudoentidades
+`@Jsonify`
+
+### Tokens
 
 ## Especificación
 Para indicar que una clase es una entidad de JCrystal, se debe anotar con `@jcrystal.reflection.annotations.Entidad`
@@ -117,3 +161,20 @@ Subclase Query
 
 ## Objetos DAO, según niveles de acceso.
 
+
+
+### Nota sobre la generación del código
+Una parte del código que genera JCrystal para la entidad se crea dentro del mismo archivo de clase que contiene la definición.
+
+Este código generado se coloca dentro de unos comentarios que delimitan la sección generada, para que en ejecuciones posteriores del generador de código se sobrescriba solo la región generada.
+
+Un ejemplo:
+```java
+@Entidad
+public class Room {
+  //Aqui se encuentra la especificación.
+/* GEN */
+ //Aqui se encuentra el codigó generado.
+/* END */
+}
+```
