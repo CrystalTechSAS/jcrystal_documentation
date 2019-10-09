@@ -1,4 +1,4 @@
-# jCrystal Framewor
+# jCrystal Framework
 _jCrystal_ is a fullstack framework based on code generators. It aims to reduce code re-write on web applications by reuseing backend side data structures, business logic and web services to generate frontend equivalents.
 
 ## Generalidades
