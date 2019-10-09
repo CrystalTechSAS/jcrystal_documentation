@@ -1,5 +1,5 @@
-# jCrystal
-_jCrystal_ es un framework de generación de código, para aplicaciones web cuyo principal objetivo es minimizar la rescritura de estructuras de datos, lógica de negocio y sintaxis de los servicios entre el backend y los distintos frontend que puede tener la aplicación.
+# jCrystal Framewor
+_jCrystal_ is a fullstack framework based on code generators. It aims to reduce code re-write on web applications by reuseing backend side data structures, business logic and web services to generate frontend equivalents.
 
 ## Generalidades
 _jCrystal_ que permite:
@@ -25,67 +25,6 @@ Sin embargo en la mayoría de casos la capa de lógica es prescindible, y la cap
 
 - [Entidades](Entidades.md)
 - [Servicios](Servicios.md)
-
-## En detalle
-### Entidades
-Las entidades en _jCrystal_ son clases que se almacenaran en una tabla en la base de datos, para marcarlas se usa la anotación `@Entidad`
-
-Otras anotaciones que puede tener una entidad `@Entidad` son `@CarbonCopy`
-
-#### Campos
-`@EntityProperty`
-
-| Parametro     | Tipo          | Descripción  |
-| ------------- |-------------| -----|
-| indexed     | boolean | Indica si este campo esta indexado en la BD |
-| unique     | boolean | Indica si el valor de esta campo no puede repetirse entre objetos de la entidad *OJO: la capa de datos no hace respetar esto*|
-| editable     | boolean | ????? |
-
-final
-##### Relaciones entre entidades
-`@Rel1to1`
-`@RelMto1`
-`target="x"`
-`@RelMtoM`
-`small=true` menos de 4000
-
-Los campos de relación no tienen nivel por defecto.
-
-##### Niveles de detalle
-
-##### Enums como atributos de una entidad
-Cuando se usa un `enum` como atributo de una entidad, este debe tener un método estático que devuelve un elemento a partir de un identificador entero con el nombre `fromId`.  El identificador se utiliza para transmitir la información y almacenarla en la base de datos.
-
-Un ejemplo de un `enum` que puede ser usado como atributo en una entidad:
-```java
-public enum StatusType {
-	PENDING(1),CONNECTING(2),COMPLETED(3);
-	public final int id;
-	private StatusType(int id) {
-		this.id = id;
-	}
-	public static StatusType fromId(int id) {
-		for (StatusType val: StatusType.values()) {
-			if (val.id==id) {
-				return val;
-			}
-		}
-		return null;
-	}
-}
-```
-
-#### Índices
-Para poder filtrar una _Entidad_ por un campo este debe estar indexado, esto se logra con el parámetro indexed colocado en true en la anotación `@EntityProperty` así:
-`@EntityProperty(indexed = true)`
-
-##### Índices complejos
-`@Index`
-
-### Pseudoentidades
-`@Jsonify`
-
-### Tokens
 
 ## Configuración inicial
 
