@@ -1,93 +1,41 @@
 # jCrystal Framework
 _jCrystal_ is a fullstack framework based on code generators. It aims to reduce code re-write on web applications by reuseing backend side data structures, business logic and web services to generate frontend equivalents.
 
-## Generalidades
-_jCrystal_ que permite:
-- A partir de una definición de entidades, generar métodos de consulta para las mismas
-- A partir de una definición de alto nivel de un servicio, generar Servlets que lo atiendan, y conectores para distintos tipos de clientes.
+## What can you achieve with jCrystal?
+On the Server Side:
+- Build a Object-Relactionship Model for yours clases and deploy it on a Non-SQL Database.
+- Bulld Restful Web Services endpoints and deploy them on a HA infrasestructure.
+- Process async job loads in a simple way.
 - Validación de usuarios.
 
-_jCrystal_ esta escrito en Java, y esta hecho para funcionar sobre Google App Engine con *XXXXX* como base de datos.
+* Our MVP allows you to write your backend in Java and deploy it over Google App Engine using Google Datastore database (legacy).
 
-El backend generado funciona con Servlets de Java EE.
-
+On the Client Side:
 Los *endpoints* se pueden generar como:
 - Swift para iOs
 - Java para Android
 - Typescript para plataformas web (especialmente Angular2)
 
-Las capas presentes en la arquitectura de jCrystal son:
-- Datos, mediante la definición de _Entidades_
-- Lógica, mediante la definición de _Crystals_
-- Web Services, mediante la definición de _Managers_
-- *Resources*
-Sin embargo en la mayoría de casos la capa de lógica es prescindible, y la capa de los Web Services utiliza directamente la capa de datos.
+jCrystal have support for the following platforms:
+- iOS 12^ (Using Swift 5)
+- Android 6^ (Using Java 8^)
+- Flutter (Using Dart)
+- Angular 7^(Usign Typescript)
+- jQuery (using JS)
+
+## jCrystal layers:
+We propose (an generate?) 3 simple layers:
+
+- A data access layer: it allows access to stored data in all platforms.
+- A connection layer: composed by RestfulWS, it allows communication between platforms
+- Buisiness layer?
 
 - [Entidades](Entidades.md)
 - [Servicios](Servicios.md)
 
-## Configuración inicial
+## Installation
 
-### Eclipse plugin
-
-Instalar el plugin de jCrystal para Eclipse haciendo uso del site _http://jcrystal.crystaltech.co/plugin/_
-
-
-### Sin plugin
-_jCrystal_ esta hecho para utilizarse desde *Eclipse*, los pasos para crear un proyecto de _jCrystal_ en Eclipse son:
-- Instalar Eclipse
-- Instala [el plugin de Cloud Tools para Eclipse](https://cloud.google.com/eclipse/docs/quickstart)
-- Crear un proyecto de tipo *XXXXX*
-- Añadir en la carpeta  *XXXX* WEB-INF del proyecto los archivos [`jCrystalUtils.jar`](http://jcrystal.crystaltech.co/libs/jCrystalUtils.jar) y `XXXXX`
-- Incluir los archivos anteriores en el _build path_
-- Poner en la raíz del proyecto el archivo [`jcrystal.jar`](http://jcrystal.crystaltech.co/libs/jcrystal.jar)
-- En la configuración del proyecto en _Eclipse_ en la sección  _Java Compiler_ activar la opción *"Store information about method parameters (usable via reflection)"* (esto permite que los *endpoints* generados tengan nombres de parámetros con significado)
-- Crear el archivo de configuración según se describe a continuación.
-
-La configuración de _jCrystal_ debe estar en el paquete por defecto del proyecto, en una clase llamada `JCrystalConfig`, adicionalmente como una salvaguarda para que _jCrystal_ se ejecute debe existir en la carpeta raíz del proyecto un archivo llamado `jcrystal.txt`.
-
-El archivo `JCrystalConfig.java` debe tener un método estático publico sin retorno, donde se define entre otras cosas:
-- La IP del servidor de generación de _jCrystal_
-- El paquete del proyecto donde se crearan las *clases auxiliares*
-- El paquete del proyecto donde se crearan los servlets
-- La definición de los clientes para los que se generara una capa de conexión.
-    - URL donde se accederá el servicio.
-    - Tipo de cliente (según `jcrystal.clients.ClientType`)
-    - Carpeta donde se generara el código.
-```java
-import static jcrystal.JCrystalConfig.*;
-
-import java.io.File;
-
-import jcrystal.clients.Client;
-import jcrystal.clients.ClientType;
-import jcrystal.clients.JClientMobile;
-import jcrystal.json.JsonLevel;
-
-public class JCrystalConfig {
-	public static void config(){
-		//Estas 4 configuraciones operan sobre los atributos estaticos de jcrystal.JCrystalConfig
-		JCRYSTAL_SERVER_IP =  "35.229.125.17";
-		SERVER_PORT = 80;
-		SERVER.setPackageInterfaces("myproject.servlets");
-		SERVER.setServletPackage("myproject.servlets");
-		
-		new Client(ClientType.ADMIN, "admin")
-			.setServerUrl("/api/");
-		
-		new Client(ClientType.TYPESCRIPT, "web")
-			.setOutput("/Users/gasotelo/myproject/web/src/app")
-			.setServerUrl("https://localhost/api/");
-		
-		new JClientMobile("mobile")
-			.setOutputAndroid("/Users/user/myproject/android/app/src/main/java")
-			.setOutputiOS("/Users/user/myproject/ios/jcrystal")
-			.setServerUrl("https://localhost/api/");
-	}
-}
-```
-
-El puerto por defecto de jCrystal es el 80.
+- [Using Eclipse](Installation.md)
 
 ### Configuración adicional para Angular2
 Se debe crear el archivo de configuración en `src/util/app-configuration.ts` con el siguiente contenido
