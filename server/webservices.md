@@ -1,6 +1,6 @@
 # jCrystal Web Services
 
-With jCrystal one web serviee is a method:
+With jCrystal one web service is a method:
 
 ```java
 package company.example.controllers;
@@ -44,6 +44,7 @@ A WS can return:
 - Entities post types
 - Jsonify data transfer objects
 - Arrays and lists of previous types
+- Tuples
 
 ## Simple examples
 
