@@ -1,7 +1,8 @@
-# Enums como atributos de una entidad
-Cuando se usa un `enum` como atributo de una entidad, este debe tener un método estático que devuelve un elemento a partir de un identificador entero con el nombre `fromId`.  El identificador se utiliza para transmitir la información y almacenarla en la base de datos.
+# Enums for entity fields
 
-Un ejemplo de un `enum` que puede ser usado como atributo en una entidad:
+You can use enums as field types for your entities. For now, every enum should have a _public long id_ to unique identify each object and a method to retrieve the object given the id.
+
+This is a example of a valid enum for jCrystal:
 ```java
 public enum StatusType {
 	PENDING(1),CONNECTING(2),COMPLETED(3);

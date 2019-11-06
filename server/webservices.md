@@ -30,10 +30,10 @@ jCrystal supports several parameter types for your WSs:
 
 - Native types and native object types (int, Integer, long, Long, boolean, Boolean, double, Double)
 - Strings
-- Entities post types
-- Jsonify data transfer objects
+- [Entities and post types](webservices_post.md)
+- [Jsonify data transfer objects](webservices_post.md)
 - Arrays and lists of previous types
-- Files
+- [Files](webservices_post.md)
 
 ## Responses
 
