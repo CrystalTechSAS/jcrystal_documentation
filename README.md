@@ -21,9 +21,10 @@ jCrystal have support for the following platforms:
 - Angular 7^(Usign Typescript)
 - jQuery (using JS)
 
-## Installation
+## Setup
 
-- [Using Eclipse](Installation.md)
+- [Using Eclipse](installation/eclipse.md)
+- [Using plain txt editors](installation/vanilla.md)
 
 ## Basic guides
 
@@ -37,16 +38,9 @@ jCrystal have support for the following platforms:
 
 ### FrontEnd
 
-- [General](clients/angular7.md) (Must read!!!)
+- [General](clients/general.md) (Must read!!!)
 - [Angular 7](clients/angular7.md)
 
 ## Advanced topics:
 
 - [Web Admin](server/queues.md)
-
-## jCrystal layers:
-We propose (an generate?) 3 simple layers:
-
-- A data access layer: it allows access to stored data in all platforms.
-- A connection layer: composed by RestfulWS, it allows communication between platforms
-- Buisiness layer?

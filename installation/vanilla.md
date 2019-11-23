@@ -1,11 +1,5 @@
-
-### Using Eclipse plugin
-
-1. Install eclipse
-2. Install Google Cloud Plugin: _https://cloud.google.com/eclipse/docs/quickstart?hl=es-419_ 
-3. Install Eclipse jCrystal Plugin using the site: _http://www.jcrystal.dev.co/plugin/_
-
 ### Sin plugin
+
 _jCrystal_ esta hecho para utilizarse desde *Eclipse*, los pasos para crear un proyecto de _jCrystal_ en Eclipse son:
 - Instalar Eclipse
 - Instala [el plugin de Cloud Tools para Eclipse](https://cloud.google.com/eclipse/docs/quickstart)
@@ -38,10 +32,7 @@ import jcrystal.json.JsonLevel;
 
 public class JCrystalConfig {
 	public static void config(){
-		//Estas 4 configuraciones operan sobre los atributos estaticos de jcrystal.JCrystalConfig
-		JCRYSTAL_SERVER_IP =  "35.229.125.17";
-		SERVER_PORT = 80;
-		SERVER.setPackageInterfaces("myproject.servlets");
+		//Estas 4 configuraciones operan sobre los atributos estaticos de jCrystal.JCrystalConfig
 		SERVER.setServletPackage("myproject.servlets");
 		
 		new Client(ClientType.ADMIN, "admin")
