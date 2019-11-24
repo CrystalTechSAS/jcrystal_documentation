@@ -1,12 +1,45 @@
-### Configuración adicional para Angular2
-Se debe crear el archivo de configuración en `src/util/app-configuration.ts` con el siguiente contenido
+# Angular 7 guide
+
+## Setup
+
+Add a typescript client to your _JCrystalConfig_ file: 
+
+```java
+...
+public class JCrystalConfig {
+	public static void config(){
+		...
+		CLIENT.add(ClientType.TYPESCRIPT, "web")  //you can use your custom id
+			.setOutput("../angulargeneratedcode") //Point this to you angular project src folder
+			.setServerUrl("https://yourserver.com/");
+    ...
+	}
+}
+```
+
+Also, add an AppConfiguration class on `src/util/app-configuration.ts` to you angular project:
+
 ```typescript
 export class AppConfiguration{
   static DEBUG = true;
 }
 ```
-#### Dependencias
-El código generado para Typescript depende de estas librerías:
+
+Include the following dependencies using npm:
+
 - [moment](https://www.npmjs.com/package/moment)
 - [sweetalert](https://www.npmjs.com/package/sweetalert)
-Adicionalmente se debe incluir la librería XXXXX en el modulo principal.
+
+## Web Services
+
+Call your web services on the following way:
+
+```typescript
+    ManagerHello.ping(this, ()=>{
+      	//On success
+    }, error=>{
+		//On error
+	});
+```
+
+On your component constructor you must add `public http : HttpClient`.
