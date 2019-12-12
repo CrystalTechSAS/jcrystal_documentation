@@ -27,6 +27,22 @@ export class AppConfiguration {
 }
 ```
 
+On the _app.module.ts_ file add `HttpClientModule` to your imports:
+
+```typescript
+import { HttpClientModule } from '@angular/common/http';
+...
+@NgModule({
+	...
+	imports: [
+		...
+		HttpClientModule,
+	],
+	...
+})
+export class AppModule { }
+```
+
 Include the following dependencies using npm:
 
 ```
