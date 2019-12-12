@@ -179,5 +179,5 @@ public class Room {
 
 # Advanced topics
 
-Otras anotaciones que puede tener una entidad `@Entidad` son `@CarbonCopy`
+Otras anotaciones que puede tener una entidad `@jEntity` son `@CarbonCopy`
 

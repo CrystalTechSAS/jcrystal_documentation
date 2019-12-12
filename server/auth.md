@@ -7,7 +7,7 @@ jCrystal MVP uses a custom token session management. In order to use it you must
 ```java
 package company.example.entities.security;
 ...
-@Entidad @LoginResultClass
+@jEntity @LoginResultClass
 public class Token implements SecurityToken{
 	@EntityKey
 	private static final String token = null;//The entity key must be named token
@@ -49,7 +49,7 @@ It is common and usefull to add user especific data to session tokens. The most 
 
 ```java
 ...
-@Entidad
+@jEntity
 public class User{
 	
 	@EntityProperty(index=IndexType.UNIQUE_VERIFICATION)
@@ -64,7 +64,7 @@ public class User{
 
 ```java
 ...
-@Entidad @LoginResultClass
+@jEntity @LoginResultClass
 public class Token implements SecurityToken{
 	@EntityKey
 	private static final String token = null;
