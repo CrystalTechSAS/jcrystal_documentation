@@ -34,12 +34,7 @@ You must have Java 1.8+ installed.
 9. _Optional:_ If it was generated, delete the `Hello App Engine.java` as well as the tests folder. From now on you won't need that much code to create a web service ;). 
 8. _Optional:_ If you see any errors, try updating your project from maven by right-clicking project and going to `Maven > Update project`.
 
-You are ready to start building! 
-
 ## What's next
 - [Create a project key](key.md)
-
-- [Learn how to add your first web service](../server/webservices.md).
-- [Add a new client to your app](../clients/general.md).
 
 
