@@ -22,8 +22,18 @@ After you write this configuration and run jCrystal, on your backend you will ha
 
 Tip: You can have multiple android clients for a project, all you have to do is add them with different ids and an annotation `@Client<your id>` will be generated.
 
-On your Android project, include the following changes on the module gradle:
 
+On your Android project, include the following changes on your rood build.gradle:
+```gradle
+allprojects {
+    repositories {
+		....
+		maven { url 'https://jitpack.io' }
+	}
+}
+```
+
+And the following changes on the module gradle:
 ```gradle
 android {
   ...
@@ -38,17 +48,6 @@ dependencies {
     implementation 'com.github.CrystalTechSAS:jCrystalAndroidLib:342e96e77d'
 }
 ```
-
-And the following changes on your rood build.gradle:
-```gradle
-allprojects {
-    repositories {
-		....
-		maven { url 'https://jitpack.io' }
-	}
-}
-```
-
 
 ## Web Services
 Whenever you want a WS to be used by your android client, you only have to annotate it with the android generated annotation on your backend:

@@ -42,6 +42,6 @@ Congratulations! You have created your first web service! Easy, right? :)
 You are ready to start building! Let's create something amazing! 
 
 ## What's next
-- [jCrystal Paradigm](../server/paradigm.md).
+- [jCrystal Paradigm](paradigm.md).
 - [Learn more about web services](../server/webservices.md).
 - [Add a client to your app](../clients/general.md).
