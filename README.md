@@ -25,6 +25,7 @@ jCrystal has support for the following platforms:
 
 - [Using Eclipse](installation/eclipse.md)
 - [Using plain txt editors](installation/vanilla.md)
+- [Creating a key and testing](installation/key.md)
 
 ## Basic guides
 

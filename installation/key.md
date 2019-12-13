@@ -10,7 +10,7 @@ To use jCrystal you need add a key to your project. To get the key:
 4. Go to Eclipse, right-click your jCrystal project and select `jCrystal> Dev key`.
 5. Paste the key in the dialog an click on the "Ok" button.
 
-## Test
+# Test
 
 To test that everything is working as expected:
 1. Create a new package named `controllers` on your Eclipse project.
@@ -29,7 +29,7 @@ public class ManagerHello {
     - Pressing `CMD + 6`.
 
         or
-    - Pressing the jCrystal icon.
+    - Pressing the jCrystal icon. //TODO: Imagen
 5. Refresh your project (`F5`).
 6. Run your server by clicking on your project and selecting `Run As > App Engine`.
 7. Go to _http://localhost:8080/api/demo/helloworld_ you should see this:
@@ -42,5 +42,6 @@ Congratulations! You have created your first web service! Easy, right? :)
 You are ready to start building! Let's create something amazing! 
 
 ## What's next
+- [jCrystal Paradigm](../server/paradigm.md).
 - [Learn more about web services](../server/webservices.md).
 - [Add a client to your app](../clients/general.md).
