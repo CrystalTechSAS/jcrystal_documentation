@@ -42,8 +42,8 @@ jCrystal has support for the following platforms:
 - [General](clients/general.md) (Must read!!!)
 - [Angular 7](clients/angular7.md)
 - [Android](clients/android.md)
-- [iOS](clients/android.md)
-- [jQuery](clients/android.md)
+- [iOS](clients/ios.md)
+- [jQuery](clients/jQuery.md)
 
 ## Advanced topics:
 
