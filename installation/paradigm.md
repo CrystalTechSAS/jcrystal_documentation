@@ -16,4 +16,4 @@ Go to your Package Explorer, select your project and:
 - Pressing `CMD + 6`.
 
     or
-- Pressing the jCrystal icon. //TODO: Imagen
+- Pressing the jCrystal icon. ![jCrystal Logo](https://github.com/CrystalTechSAS/jcrystal_documentation/raw/master/images/logo_min.png "jCrystal Logo")

@@ -29,7 +29,8 @@ public class ManagerHello {
     - Pressing `CMD + 6`.
 
         or
-    - Pressing the jCrystal icon. //TODO: Imagen
+    - Pressing the jCrystal icon. ![jCrystal Logo](https://github.com/CrystalTechSAS/jcrystal_documentation/raw/master/images/logo_min.png "jCrystal Logo")
+    
 5. Refresh your project (`F5`).
 6. Run your server by clicking on your project and selecting `Run As > App Engine`.
 7. Go to _http://localhost:8080/api/hello/helloworld_ you should see this:
