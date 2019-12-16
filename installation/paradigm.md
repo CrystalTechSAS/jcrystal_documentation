@@ -9,7 +9,7 @@ Therefore, it works in a different way from traditional frameworks, it offers no
 3. Code is automatically generated from the code written in 1, for you to use in your backend or client platforms.
 4. Repeat 1 if necessary.
 
-So remember, whenever you write some code tun jCrystal and it will generate useful code for you. It might be strange the first few times, but soon you will find that jCrystal helps you create multiplatform applications easily. 
+So remember, whenever you write some code run jCrystal and it will generate useful code for you. It might be strange the first few times, but soon you will find that jCrystal helps you create multiplatform applications easily. 
 
 ## Running jCrystal
 Go to your Package Explorer, select your project and: 

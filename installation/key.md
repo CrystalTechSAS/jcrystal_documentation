@@ -32,7 +32,7 @@ public class ManagerHello {
     - Pressing the jCrystal icon. //TODO: Imagen
 5. Refresh your project (`F5`).
 6. Run your server by clicking on your project and selecting `Run As > App Engine`.
-7. Go to _http://localhost:8080/api/demo/helloworld_ you should see this:
+7. Go to _http://localhost:8080/api/hello/helloworld_ you should see this:
 ```json
 {"success":1,"r":"Hello World from jCrystal!"}
 ```
