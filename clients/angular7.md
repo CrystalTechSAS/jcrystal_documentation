@@ -19,7 +19,7 @@ public class JCrystalConfig {
 
 After you write this configuration and run jCrystal, on your backend you will have a new annotation available: `@ClientWeb` which you can use to annotate the web services that will be used by the Angular client.
 
-On your Angular project add an AppConfiguration class on `src/utils/app-configuration.ts`:
+On your Angular project add an AppConfiguration class on `src/app/utils/app-configuration.ts`:
 
 ```typescript
 export class AppConfiguration {
