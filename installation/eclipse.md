@@ -7,7 +7,7 @@ You must have Java 1.8+ installed.
 2. Install [Google Cloud Plugin](https://cloud.google.com/eclipse/docs/quickstart).
 3. Install Eclipse jCrystal Plugin: 
 
-    1. On MacOS select `Help > Install New Software...`
+    1. On Eclipse select `Help > Install New Software...`
 
     2. Click the "Add" button.
 
