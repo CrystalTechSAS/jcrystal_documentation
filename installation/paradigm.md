@@ -13,7 +13,7 @@ So remember, whenever you write some code run jCrystal and it will generate usef
 
 ## Running jCrystal
 Go to your Package Explorer, select your project and: 
-- Pressing `CMD + 6`.
+- Pressing  `CTRL + 6` (Windows) or `CMD + 6` (Mac OS).
 
     or
 - Pressing the jCrystal icon. ![jCrystal Logo](https://github.com/CrystalTechSAS/jcrystal_documentation/raw/master/images/logo_min.png "jCrystal Logo")
