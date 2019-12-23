@@ -73,8 +73,8 @@ La anotación `@jcrystal.reflection.annotations.EntityProperty` tiene los siguie
 	- MULTIPLE: The most simple type of index. The field is indexed and a query over a value this field can retrieve multiple entities.
 	- UNIQUE: The field is indexed and a query over a value this field shoud retrieve only one entity. You must ensure each field value only has one entity.
 	- UNIQUE_VERIFICATION: Like UNIQUE but jCrystal will valide the uniqueness and throw an exception if the validation failed.
-- _editable_
-- _json_
+- _editable_: If set to false, this property will never be modified by a post update. 
+- _level_
 - _autoNow_ (booleano): aplicable solo a los parámetros de tipos CrystalDate*, indica si estos se inicializan automáticamente con el tiempo actual.
 
 \*We suggest to declare each field as `private` to avoid confussions.
@@ -115,7 +115,15 @@ Los campos de relación, son indexados automáticamente y por tanto no tienen la
 
 Los campos de relación no tienen nivel por defecto.
 
-# [Using entites on WSs](webservices_entities.md)
+# Using entites on WSs
+
+```java
+@JsonMin(value = {Project.class})
+@JsonFull(value = {ProjectKey.class})
+public static Tupla2<List<Project>, List<ProjectKey>> A(Project.Post.Basic asd, ProjectKey.Post.Min qwe){
+	return null;
+}
+```
 
 # [jCrystal queries](queries.md)
 

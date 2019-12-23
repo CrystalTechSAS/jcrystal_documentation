@@ -51,3 +51,10 @@ A WS can return:
 ## Complex data upload
 
 ## File uploads
+
+```java
+public static void A(FileUploadDescriptor desc) throws Exception{
+	desc.put("bucket", "nombre.txt");
+	
+}
+```
