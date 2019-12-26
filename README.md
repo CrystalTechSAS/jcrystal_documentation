@@ -21,11 +21,13 @@ jCrystal has support for the following platforms:
 - Angular 7^(Usign Typescript)
 - jQuery (using JS)
 
-## Setup
-
-- [Using Eclipse](installation/eclipse.md)
-- [Using plain txt editors](installation/vanilla.md)
-- [Creating a key and testing](installation/key.md)
+## Getting Started
+- [Installation](getting_started/installation.md)
+- [Creating a new application](getting_started/creating_app.md)
+- [Running and testing your application](getting_started/run_test.md) 
+- [Anatomy of a jCrystal application](getting_started/run_test.md) 
+- [jCrystal's paradigm](getting_started/paradigm.md)
+- [Troubleshooting](getting_started/troubleshooting.md)
 
 ## Basic guides
 
