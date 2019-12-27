@@ -25,15 +25,27 @@ jCrystal has support for the following platforms:
 - [Installation](getting_started/installation.md)
 - [Creating a new application](getting_started/creating_app.md)
 - [Running and testing your application](getting_started/run_test.md) 
-- [Anatomy of a jCrystal application](getting_started/run_test.md) 
+- [Anatomy of a jCrystal application](getting_started/anatomy.md) 
 - [jCrystal's paradigm](getting_started/paradigm.md)
 - [Troubleshooting](getting_started/troubleshooting.md)
+
+## Tutorial
+- Part 1: A simple bookstore backend
+- Part 2: Adding a frontend client
+- Part 3: Adding authenticated users
+- Part 4: Setting an admin site
+- Part 5: Queries and async tasks 
+
+## Quick starts
+
+- [Backend + Angular7 Quick Start]() 
+- [Backend + Android + iOS Quick Start]() 
 
 ## Basic guides
 
 ### Backend
 
-- [General & Architecture](server/general.md) (optional)
+<!--- - [General & Architecture](server/general.md) (optional)-->
 - [Web Services](server/webservices.md)
 - [Authentication  and Autorization](server/auth.md)
 - [Entities and DB access](server/entities.md)
@@ -47,6 +59,9 @@ jCrystal has support for the following platforms:
 - [iOS](clients/ios.md)
 - [jQuery](clients/jQuery.md)
 
+
+<!--- 
 ## Advanced topics:
 
 - [Web Admin](server/queues.md)
+--->

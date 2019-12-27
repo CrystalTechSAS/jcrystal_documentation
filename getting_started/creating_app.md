@@ -25,19 +25,24 @@ Please make sure you have followed the instructions detailed on [Installation](i
 
 ![Utils folder](https://github.com/CrystalTechSAS/jcrystal_documentation/raw/master/images/utils_folder.png "Utils folder")
 
-8. Right click your project and select `Properties`. On the properties dialog, go to `Java Compiler` and check the option "Store information about method parameters". 
+8. Refresh your project by going to `File > Refresh`.
+
+9.  If you see any errors, try updating your project from maven by right-clicking project and going to `Maven > Update project`.
+
+### Optional steps
+
+These steps are not mandatory, but can help you enjoy your experience with jCrystal:
+
+1. Right click your project and select `Properties`. On the properties dialog, go to `Java Compiler` and check the option "Store information about method parameters". 
 
 ![Store information about method parameters](https://github.com/CrystalTechSAS/jcrystal_documentation/raw/master/images/store_information.png "Store information about method parameters")
 
-9. Click **Apply and Close**. 
+2. Click **Apply and Close**. 
 
-10. On the dialog to rebuild the project, click **Yes**.
+3. On the dialog to rebuild the project, click **Yes**.
 
-11. Refresh your project by going to `File > Refresh`.
+4. Delete the `Hello App Engine.java` as well as the **`src/java/tests`** folder. From now on you won't need that much code to create a web service :wink:. 
 
-12. _Optional:_ Delete the `Hello App Engine.java` as well as the tests folder. From now on you won't need that much code to create a web service :wink:. 
-
-13. _Optional:_ If you see any errors, try updating your project from maven by right-clicking project and going to `Maven > Update project`.
 
 ## Create and setup a key
 
