@@ -26,12 +26,12 @@ Total time: 804 ms
 Even if nothing is happening, if you see these lines jCrystal is running as expected. If you have an empty project and want to see jCrystal in action [learn how create your first webservice and run your application](run_test.md). 
 
 If on the console logs you see any line that starts with "Server error message", please check: 
-- [Server error message: Invalid key or not given](#invalid_key)
-- [Server error message: XXX](#server_error)
+- [Server error message: Invalid key or not given](#server-error-message-invalid-key-or-not-given)
+- [Server error message: XXX](#server-error-message-xxx)
 
 
 ## jCrystal doesn't generate anything and it should
-If you have checked [Nothing happens when I run jCrystal](#nothing) and jCrystal is running as expected but it's not generating anything. Then,
+If you have checked [nothing happens when I run jCrystal](#nothing-happens-when-i-run-jcrystal) and jCrystal is running as expected but it's not generating anything. Then,
 
 - Make sure you have saved all your files.
 - Refresh your project by going to `File > Refresh`.
@@ -39,7 +39,7 @@ If you have checked [Nothing happens when I run jCrystal](#nothing) and jCrystal
 - Try running jCrystal once again. 
 
 ## Server error message: Invalid key or not given
-This error occurs when the key of the project hasn't been properly set. Please check [how to create and setup the key.](creating_app.md#Create_and_setup_a_key)
+This error occurs when the key of the project hasn't been properly set. Please check [how to create and setup the key.](creating_app.md#create-and-setup-a-key)
 
 ## Server error message: XXX
 

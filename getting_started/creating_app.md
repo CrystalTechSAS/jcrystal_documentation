@@ -22,8 +22,7 @@ Please make sure you have followed the instructions detailed on [Installation](i
 6. Refresh your project by going to `File > Refresh`.
 
 7. Select the `src/main/utils` folder and add it to your build by right-clicking it and selecting `Build path > Use as Source Folder`. This folder will contain the generated code of your server.
-
-    ![Utils folder](https://github.com/CrystalTechSAS/jcrystal_documentation/raw/master/images/utils_folder.png "Utils folder")
+    <img src="images/utils_folder.png" alt="Utils folder" height="250">
 
 8.  If you see any errors, try updating your project from maven by right-clicking project and going to `Maven > Update project`.
 
@@ -32,9 +31,7 @@ Please make sure you have followed the instructions detailed on [Installation](i
 These steps are not mandatory, but can help you enjoy your experience with jCrystal:
 
 1. Right click your project and select `Properties`. On the properties dialog, go to `Java Compiler` and check the option "Store information about method parameters". 
-
-![Store information about method parameters](https://github.com/CrystalTechSAS/jcrystal_documentation/raw/master/images/store_information.png "Store information about method parameters")
-
+     <img src="images/store_information.png" alt="Store information about method parameters" height="700">
 2. Click **Apply and Close**. 
 
 3. On the dialog to rebuild the project, click **Yes**.
