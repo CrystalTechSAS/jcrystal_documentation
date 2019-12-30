@@ -29,10 +29,10 @@ jCrystal has support for the following platforms:
 - [jCrystal's paradigm](getting_started/paradigm.md)
 - [Troubleshooting](getting_started/troubleshooting.md)
 
-## Tutorial
-- Part 1: A simple bookstore backend
-- Part 2: Adding a frontend client
 <!--
+## Tutorial
+- Part 1: A simple blogging plataform backend
+- Part 2: Adding a frontend client
 - Part 3: Adding authenticated users
 - Part 4: Setting an admin site
 - Part 5: Queries and async tasks -->
