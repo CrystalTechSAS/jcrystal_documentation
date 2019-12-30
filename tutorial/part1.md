@@ -30,7 +30,7 @@ Please make sure you have followed the instructions detailed on [Installation](/
 
 7. Select the `src/main/utils` folder and add it to your build by right-clicking it and selecting `Build path > Use as Source Folder`. This folder will contain the generated code of your server.
 
-    <img src="images/utils_folder.png" alt="Utils folder" height="250">
+    <img src="../images/utils_folder.png" alt="Utils folder" height="250">
 
 8.  If you see any errors, try updating your project from maven by right-clicking project and going to `Maven > Update project`.
 
@@ -40,7 +40,7 @@ These steps are not mandatory, but can help you enjoy your experience with jCrys
 
 1. Right click your project and select `Properties`. On the properties dialog, go to `Java Compiler` and check the option "Store information about method parameters". 
 
-    <img src="images/store_information.png" alt="Store information about method parameters" height="700">
+    <img src="../images/store_information.png" alt="Store information about method parameters" height="700">
 
 2. Click **Apply and Close**. 
 
