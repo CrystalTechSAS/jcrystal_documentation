@@ -36,7 +36,7 @@ These steps are not mandatory, but can help you enjoy your experience with jCrys
 
 3. On the dialog to rebuild the project, click **Yes**.
 
-4. Delete the `Hello App Engine.java` as well as the **`src/java/tests`** folder. From now on you won't need that much code to create a web service :wink:. 
+4. Delete the `Hello App Engine.java` as well as the **`src/java/tests`** folder. From now on you won't need that much code to create a web service. :wink:
 
 
 ## Create and setup a key
