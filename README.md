@@ -32,14 +32,10 @@ jCrystal has support for the following platforms:
 ## Tutorial
 - Part 1: A simple bookstore backend
 - Part 2: Adding a frontend client
+<!--
 - Part 3: Adding authenticated users
 - Part 4: Setting an admin site
-- Part 5: Queries and async tasks 
-
-## Quick starts
-
-- [Backend + Angular7 Quick Start]() 
-- [Backend + Android + iOS Quick Start]() 
+- Part 5: Queries and async tasks -->
 
 ## Basic guides
 

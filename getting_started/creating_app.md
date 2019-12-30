@@ -23,11 +23,9 @@ Please make sure you have followed the instructions detailed on [Installation](i
 
 7. Select the `src/main/utils` folder and add it to your build by right-clicking it and selecting `Build path > Use as Source Folder`. This folder will contain the generated code of your server.
 
-![Utils folder](https://github.com/CrystalTechSAS/jcrystal_documentation/raw/master/images/utils_folder.png "Utils folder")
+    ![Utils folder](https://github.com/CrystalTechSAS/jcrystal_documentation/raw/master/images/utils_folder.png "Utils folder")
 
-8. Refresh your project by going to `File > Refresh`.
-
-9.  If you see any errors, try updating your project from maven by right-clicking project and going to `Maven > Update project`.
+8.  If you see any errors, try updating your project from maven by right-clicking project and going to `Maven > Update project`.
 
 ### Optional steps
 
