@@ -60,6 +60,7 @@ An entity field is an private static attribute annotated with `@jcrystal.reflect
 - Email -TODO- Clase exacta
 - GeoPt De Google
 - los _wrapper_ de JCrystal para las fechas (CrystalDate).
+- Text.
 - [Enums](enums.md)
 
 Entre los métodos que genera JCrystal para los campos están los _getters_ y los _setters_ de cada uno de los campos.
@@ -189,3 +190,6 @@ public class Room {
 
 Otras anotaciones que puede tener una entidad `@jEntity` son `@CarbonCopy`
 
+@MaxValidation
+@MinValidation
+Pregunta: valor por defecto?
