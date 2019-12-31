@@ -13,7 +13,7 @@ To check that jCrystal is running:
 - Pressing  `CTRL + 6` (Windows) or `CMD + 6` (Mac OS).
 
     or
-- Pressing the jCrystal icon. ![jCrystal Logo](https://github.com/CrystalTechSAS/jcrystal_documentation/raw/master/images/logo_min.png "jCrystal Logo")
+- Pressing the jCrystal icon. <img src="../images/logo_min.png" alt="jCrystal Logo">
 
 3. On your console you should see something like:
 

@@ -33,7 +33,7 @@ These steps are not mandatory, but can help you enjoy your experience with jCrys
 
 1. Right click your project and select `Properties`. On the properties dialog, go to `Java Compiler` and check the option "Store information about method parameters". 
 
-     <img src="../images/store_information.png" alt="Store information about method parameters" height="700">
+     <img src="../images/store_information.png" alt="Store information about method parameters">
 
 2. Click **Apply and Close**. 
 
@@ -65,7 +65,7 @@ Your project is ready to be used! :tada: To verify that jCrystal is working:
 - Pressing  `CTRL + 6` (Windows) or `CMD + 6` (Mac OS).
 
     or
-- Pressing the jCrystal icon. ![jCrystal Logo](https://github.com/CrystalTechSAS/jcrystal_documentation/raw/master/images/logo_min.png "jCrystal Logo")
+- Pressing the jCrystal icon. <img src="../images/logo_min.png" alt="jCrystal Logo">
 
 2. Open the console view by going to `Window > Show View > Console` you should see something like:
 
