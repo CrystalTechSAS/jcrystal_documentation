@@ -4,44 +4,6 @@
 
 Please make sure you have followed the instructions detailed on [Installation](installation.md).
 
-## Creating a new application project
-
-1. Open Eclipse.
-
-2. Create a new "Google App Engine Standard Java Project". 
-
-3. On the setup dialog:
-    - Enter a Project Name 
-    - Check the "Create as Maven Project" option.
-    - Enter a Group ID and Artifact ID.
-
-4. Click **Finish**. 
-
-5. Right-click your new project, select `jCrystal > Add dependencies`. 
-
-6. Refresh your project by going to `File > Refresh`.
-
-7. Select the `src/main/utils` folder and add it to your build by right-clicking it and selecting `Build path > Use as Source Folder`. This folder will contain the generated code of your server.
-
-    <img src="../images/utils_folder.png" alt="Utils folder" height="250">
-
-8.  If you see any errors, try updating your project from maven by right-clicking project and going to `Maven > Update project`.
-
-### Optional steps
-
-These steps are not mandatory, but can help you enjoy your experience with jCrystal:
-
-1. Right click your project and select `Properties`. On the properties dialog, go to `Java Compiler` and check the option "Store information about method parameters". 
-
-     <img src="../images/store_information.png" alt="Store information about method parameters">
-
-2. Click **Apply and Close**. 
-
-3. On the dialog to rebuild the project, click **Yes**.
-
-4. Delete the `Hello App Engine.java` as well as the **`src/java/tests`** folder. From now on you won't need that much code to create a web service. :wink:
-
-
 ## Create and setup a key
 
 To use jCrystal you need add a key to your project. To get the key:
@@ -52,11 +14,35 @@ To use jCrystal you need add a key to your project. To get the key:
 
 2. Create a new project with the name of your project.
 
-3. Copy the project key.
+3. Copy the project key, we will use it in the next section.
 
-4. Go to Eclipse, right-click your jCrystal project and select `jCrystal > Dev key`.
+## Creating a new application project
 
-5. Paste the key in the dialog an click on the "Ok" button.
+1. Open Eclipse.
+
+2. Go to the menu File then choose `New > Other`.
+
+3. On the dialog, search for jCrystal and select jCrystal project. Then click **Next**.
+
+    <img src="../images/new_wizard.png" alt="New wizard">
+
+4. On the setup dialog:
+    - Enter a Project Name.
+    - Enter the jCristal API Key for your project that you previously obtained.
+    - Enter a Group ID and Artifact ID.
+
+5. Click **Next**. 
+
+5. On the setup client's dialog, you can define the clients that your project is going to use. A client is defined by:
+    - A platform: Android, iOS, Angular.
+    - A custom client identifier.
+    - A path to the generated code of that client (usually the path of the project of that client).
+
+    If you don't know which clients your project will use, don't worry! You can add the clients later. Also if you add them, you can later change the path of the generated code. :wink:
+
+    Additionally, if you just want to test jCrystal to build a simple backend, you can click **Finish** without selecting any client. 
+
+6. Click **Finish**. 
 
 ## Verifying
 Your project is ready to be used! :tada: To verify that jCrystal is working:
