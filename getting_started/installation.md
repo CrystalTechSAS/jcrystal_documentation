@@ -32,9 +32,9 @@ Working with jCrystal it's easy. It integrates with your development environment
 3. Install Eclipse jCrystal Plugin: 
     1. Drag the install button into your running Eclipse workspace:
 
-    <a href="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=4943082" class="drag" title="Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client"><img typeof="foaf:Image" class="img-responsive" src="https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png" alt="Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client" /></a>
+        <a href="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=4943082" class="drag" title="Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client"><img typeof="foaf:Image" class="img-responsive" src="https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png" alt="Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client" /></a>
     
-    Or inside Eclipse, select `Help > Eclipse Marketplace...` and search for **jCrystal Tools** and click **Install**. 
+        Or inside Eclipse, select `Help > Eclipse Marketplace...` and search for **jCrystal Tools** and click **Install**. 
 
     2. On the new dialog, check de "jCrystal Tools" checkbox (if it's not checked already) and click **Confirm**.
 
