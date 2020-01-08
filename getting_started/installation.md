@@ -30,25 +30,19 @@ Working with jCrystal it's easy. It integrates with your development environment
 1. Install Eclipse IDE for Java EE Developers, version 4.7 or later: [Eclipse](http://www.eclipse.org/downloads/eclipse-packages/). 
 2. Install [Google Cloud Plugin](https://cloud.google.com/eclipse/docs/quickstart).
 3. Install Eclipse jCrystal Plugin: 
+    1. Drag the install button into your running Eclipse workspace:
 
-    1. On Eclipse select `Help > Install New Software...`
+    [![Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=4943082 "Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client")
+    
+    Or inside Eclipse, select `Help > Eclipse Marketplace...` and search for **jCrystal Tools** and click **Install**. 
 
-    2. Click the "Add" button.
+    2. On the new dialog, check de "jCrystal Tools" checkbox (if it's not checked already) and click **Confirm**.
 
-    3. On the new dialog, set the name as "jCrystal" and the "Location" as 
- _https://www.jcrystal.dev/plugin/_
+    3. Choose "I accept the terms of the license agreement" and click **Finish**.
 
-    4. Click the "Add" button.
+    4. Click **Install anyway** if a Security Warning dialog appears.
 
-    5. The "Install" dialog should have updated, check de "Tools" checkbox and click on the "Next" button.
-
-    6. Click on the "Next" button.
-
-    7. Choose "I accept the terms of the license agreement" and click "Finish".
-
-    8. Click "Install anyway" if a Security Warning dialog appears.
-
-    9. Restart Eclipse when prompted.
+    5. Restart Eclipse when prompted.
 
 You are ready to create applications using jCrystal! :tada: 
 
