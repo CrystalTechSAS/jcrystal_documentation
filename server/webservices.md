@@ -12,7 +12,12 @@ public class Manager {
 }
 ```
 
-To be a WS, a method should be public, defined on a class with _Manager_ as name prefix and should be inside a package named _controllers_ as some of its parent. The following is also a web service:
+To be a WS, a method should be:
+- **public**
+- Defined on a class with _Manager_ as name prefix.
+- The class should be inside a package with the name _controllers_ as one of its parents. 
+
+The following is also a web service:
 
 ```java
 package company.example.controllers.mobile.test;
@@ -30,7 +35,7 @@ jCrystal supports several parameter types for your WSs:
 
 - Native types and native object types (int, Integer, long, Long, boolean, Boolean, double, Double)
 - Strings
-- [Entities and post types](webservices_post.md)
+- [Entities and post types](webservices_posts.md)
 - [Jsonify data transfer objects](webservices_post.md)
 - Arrays and lists of previous types
 - [Files](webservices_post.md)
