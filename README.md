@@ -3,7 +3,7 @@ _jCrystal_ is a fullstack framework based on code generators. It aims to reduce 
 
 ## What can you achieve with jCrystal?
 On the Server Side:
-- Build Restful Web Services endpoints and deploy them on a high available infraestructure.
+- Build Restful Web Services endpoints and deploy them on a high available infrastructure.
 - Build a Object-Relationship Model for your solution and deploy it on a Non-SQL Database.
 - Process async job loads in a simple way.
 - User validation. 
