@@ -1,6 +1,6 @@
 # jCrystal Web Services
 
-With jCrystal one web service is a method:
+With jCrystal one web service (WS) is a method:
 
 ```java
 package company.example.controllers;
@@ -16,6 +16,8 @@ To be a WS, a method should be:
 - **public**
 - Defined on a class with _Manager_ as name prefix.
 - The class should be inside a package with the name _controllers_ as one of its parents. 
+
+The route for a webservice is `<your server>/api/`
 
 The following is also a web service:
 
