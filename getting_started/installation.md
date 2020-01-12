@@ -44,9 +44,9 @@ Working with jCrystal it's easy. It integrates with your development environment
 
     5. Restart Eclipse when prompted.
 
-You are ready to create applications using jCrystal! :tada: 
+You are ready to create projects using jCrystal! :tada: 
 
 ## What's next
-- [Create a new application](creating_app.md)
+- [Create a new project](creating_project.md)
 
 

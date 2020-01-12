@@ -1,6 +1,6 @@
-# Anatomy of a jCrystal application
+# Anatomy of a jCrystal project
 
-The structure of a jCrystal application follows the standardized structure of a Java Web application with some minor changes. After following the [guide to creating a new application](creating_app.md), the project should look like this:
+The structure of a jCrystal project follows the standardized structure of a Java Web application project with some minor changes. After following the [guide to creating a new project](creating_project.md), the project should look like this:
 
 ```
 pom.xml
@@ -43,7 +43,7 @@ This folder is used to store almost all the generated classes from jCrystal. Fee
 
 ### The **`src/main/webapp/`** directory
 
-This folder contains web pages, CSS or images of your web application. If you want to use the same domain for your backend and your frontend application, you will have to update the static files found in here:
+This folder contains web pages, CSS or images of your web application project. If you want to use the same domain for your backend and your frontend application, you will have to update the static files found in here:
 - index.html
 - favicon.ico
 
@@ -53,7 +53,7 @@ For more information on this directory check this [link](https://docs.oracle.com
 
 ### The **`src/main/webapp/WEB-INF`** folder
 
-This folder contains configuration files of your application. Usually, you don't need to add or change any file here.
+This folder contains configuration files of your application project. Usually, you don't need to add or change any file here.
 
 ### The **`src/main/webapp/META-INF`** folder
 This folder contains internal project files. You don't need to add or change any file here.

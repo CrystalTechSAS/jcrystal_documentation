@@ -1,4 +1,4 @@
-# Creating a new application
+# Creating a new project
 
 ## Before you begin
 
@@ -16,7 +16,7 @@ To use jCrystal you need add a key to your project. To get the key:
 
 3. Copy the project key, we will use it in the next section.
 
-## Creating a new application project
+## Creating a new project
 
 1. Open Eclipse.
 
@@ -65,10 +65,10 @@ So, what did just happened? jCrystal scanned all your project files to know whic
 
 Refresh and check your project, do you see anything different? 
 
-You will find that your project is the same after running jCrystal: nothing was generated. Why is that? That's because your application is still empty, so jCrystal didn't find anything that could generate that would be useful. Go to the next section to [learn how to run your application and really use jCrystal](run_test.md).
+You will find that your project is the same after running jCrystal: nothing was generated. Why is that? That's because your project is still empty, so jCrystal didn't find anything that could generate that would be useful. Go to the next section to [learn how to run your project and really use jCrystal](run_test.md).
 
 
 ## What's next
-- [Learn how to run and test your application](run_test.md) 
+- [Learn how to run and test your project](run_test.md).
 - Did you encounter an error creating the app? Check our [troubleshooting](troubleshooting.md). 
-- [Anatomy of a jCrystal application](anatomy.md) 
+- [Anatomy of a jCrystal project](anatomy.md).

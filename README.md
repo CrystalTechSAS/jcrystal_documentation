@@ -23,9 +23,9 @@ jCrystal has support for the following platforms:
 
 ## Getting Started
 - [Installation](getting_started/installation.md)
-- [Creating a new application](getting_started/creating_app.md)
-- [Running and testing your application](getting_started/run_test.md) 
-- [Anatomy of a jCrystal application](getting_started/anatomy.md) 
+- [Creating a new project](getting_started/creating_project.md)
+- [Running and testing your project](getting_started/run_test.md) 
+- [Anatomy of a jCrystal project](getting_started/anatomy.md) 
 - [jCrystal's paradigm](getting_started/paradigm.md)
 - [Troubleshooting](getting_started/troubleshooting.md)
 

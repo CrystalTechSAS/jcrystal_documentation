@@ -39,7 +39,7 @@ If you have checked [nothing happens when I run jCrystal](#nothing-happens-when-
 - Try running jCrystal once again. 
 
 ## Server error message: Invalid key or not given
-This error occurs when the key of the project hasn't been properly set. Please check [how to create and setup the key.](creating_app.md#create-and-setup-a-key)
+This error occurs when the key of the project hasn't been properly set. Please check [how to create and setup the key.](creating_project.md#create-and-setup-a-key)
 
 ## Server error message: XXX
 
