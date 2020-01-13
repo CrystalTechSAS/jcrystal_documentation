@@ -2,7 +2,7 @@
 
 Throughout this tutorial, we’ll walk you through the creation of a backend for a blogging platform and a frontend application that uses said backend.
 
-A blogging platform works by letting users create, read, update and delete articles. For now, we will focus on the articles and not the users that write them, which will be the focus of other parts of this tutorial. Therefore, right now  we want a backend that helps us:
+A blogging platform works by letting users create, read, update and delete articles. For now, we will focus on the articles and not the users that write them, which will be the focus of other parts of this tutorial. Therefore, right now  we want to create a backend that helps us:
 - Create, read, delete and update articles.
 
 *Note: This tutorial is loosely based on [RealWorld](https://github.com/gothinkster/realworld), a real-world blogging platform and a Medium.com clone. You can find more information about it [here](https://medium.com/@ericsimons/introducing-realworld-6016654d36b5).*
@@ -11,7 +11,7 @@ A blogging platform works by letting users create, read, update and delete artic
 
 Please make sure you have followed the instructions detailed on [Installation](/getting_started/installation.md).
 
-## Creating a new application project
+## Creating a new project
 
 1. Open Eclipse.
 
@@ -30,7 +30,7 @@ Please make sure you have followed the instructions detailed on [Installation](/
 
 7. Select the `src/main/utils` folder and add it to your build by right-clicking it and selecting `Build path > Use as Source Folder`. This folder will contain the generated code of your server.
 
-    <img src="../images/utils_folder.png" alt="Utils folder" height="250">
+    <img src="../images/utils_folder.png" alt="Utils folder">
 
 8.  If you see any errors, try updating your project from maven by right-clicking project and going to `Maven > Update project`.
 
@@ -40,7 +40,7 @@ These steps are not mandatory, but can help you enjoy your experience with jCrys
 
 1. Right click your project and select `Properties`. On the properties dialog, go to `Java Compiler` and check the option "Store information about method parameters". 
 
-    <img src="../images/store_information.png" alt="Store information about method parameters" height="700">
+    <img src="../images/store_information.png" alt="Store information about method parameters" >
 
 2. Click **Apply and Close**. 
 
@@ -71,7 +71,7 @@ Your project is ready to be used! :tada: To verify that jCrystal is working:
 - Pressing  `CTRL + 6` (Windows) or `CMD + 6` (Mac OS).
 
     or
-- Pressing the jCrystal icon. ![jCrystal Logo](https://github.com/CrystalTechSAS/jcrystal_documentation/raw/master/images/logo_min.png "jCrystal Logo")
+- Pressing the jCrystal icon. <img src="../images/logo_min.png" alt="jCrystal Logo">
 
 2. Open the console view by going to `Window > Show View > Console` you should see something like:
 
@@ -85,7 +85,7 @@ So, what did just happened? jCrystal scanned all your project files to know whic
 
 Refresh and check your project, do you see anything different? 
 
-You will find that your project is the same after running jCrystal: nothing was generated. Why is that? That's because your application is still empty, so jCrystal didn't find anything that could generate that would be useful. Let's add something :wink: . 
+You will find that your project is the same after running jCrystal: nothing was generated. Why is that? That's because your project is still empty, so jCrystal didn't find anything that could generate that would be useful. Let's add something :wink: . 
 
 ## Creating your first entity
 
@@ -93,7 +93,8 @@ Let's create an Article entity to represent an article in our platform. We will 
 - **Title**: The title of the article (max 250 characters).
 - **Description**: A short text that describes what this article is about (max 350 characters).
 - **Body**: The text of our article.
-- **Slug**: A string that will be unique to each article used to represent that article  (max 250 characters). More information on slugs can be found on [this Wikipedia article](https://en.wikipedia.org/wiki/Clean_URL#Slug). 
+- **Slug**: A string that will be unique to each article used to represent that article. More information on slugs can be found on [this Wikipedia article](https://en.wikipedia.org/wiki/Clean_URL#Slug).
+- **Number of views**: The number of times this article has been seen (initially cero). 
 - **Creation date**: The date when the article was created.
 
 Let's create this entity:
@@ -134,6 +135,9 @@ public class Article {
 
     @EntityProperty
 	private static String slug;
+
+	@EntityProperty
+	private static int numViews;
 	
 	@EntityProperty
 	private static Text body;
@@ -153,7 +157,7 @@ The `body` attribute has a special type `Text`, that's because the `String` type
     - Pressing `CTRL + 6` (Windows) or `CMD + 6` (Mac OS).
 
     or
-    - Pressing the jCrystal icon. ![jCrystal Logo](https://github.com/CrystalTechSAS/jcrystal_documentation/raw/master/images/logo_min.png "jCrystal Logo")
+    - Pressing the jCrystal icon. <img src="../images/logo_min.png" alt="jCrystal Logo">
 
 Check your `Article` class, it now has about 180 lines of code and you should see  something like this:
 
@@ -169,6 +173,9 @@ public class Article implements Entity{
 
     @EntityProperty
 	private static String slug;
+
+	@EntityProperty
+	private static int numViews;
 	
 	@EntityProperty
 	private static Text body;
@@ -212,14 +219,103 @@ public class Article implements Entity{
 ...
 }
 ```
+CrystalDateTime is a special type used by jCrystal to represent a date and time. jCrystal doesn't support java.util.Date as an EntityProperty type, instead it has it's own classes:
+- `CrystalDate`
+- `CrystalDateMilis`
+- `CrystalDateSeconds`
+- `CrystalDateTime`
+- `CrystalTime`
+- `CrystalTimeMilis`
+- `CrystalTimeSeconds`
+
 
 7. Update your generated code by running jCrystal. Go to your Package Explorer, select your project and: 
     - Pressing `CTRL + 6` (Windows) or `CMD + 6` (Mac OS).
 
     or
-    - Pressing the jCrystal icon. ![jCrystal Logo](https://github.com/CrystalTechSAS/jcrystal_documentation/raw/master/images/logo_min.png "jCrystal Logo")
+    - Pressing the jCrystal icon. <img src="../images/logo_min.png" alt="jCrystal Logo">
 
 
-    *Why do I keep running jCrystal? Every time you add or change something to your entities or web services, you **need** to run jCrystal so that the generated code can be updated according to the changes you made. If you don't run jCrystal, you might end up with a generated code that it's **outdated and that doesn't help you develop faster.***
-    *Please check [jCrystal's paradigm to learn more about this.](/getting_started/paradigm.md)*
+    Why do I keep running jCrystal? Every time you add or change something to your entities or web services, you **need** to run jCrystal so that the generated code can be updated according to the changes you made. If you don't run jCrystal, you might end up with a generated code that it's **outdated and that doesn't help you develop faster.***
+    *Please check [jCrystal's paradigm to learn more about this.](/getting_started/paradigm.md)
 
+## Adding validations and default values
+
+If you check the definitions that we made of the properties of an article, they included:
+
+- Maximum sizes for the title and the description.
+- Default values for the number of views.
+- Unique value for the slug of each article. 
+
+Let's see how jCrystal helps to add those validations and default values:
+
+1. Add a maximum validation to the title and description:
+
+```java
+...
+@jEntity
+public class Article implements Entity{
+	@EntityProperty
+	@MaxValidation(max = 250, value="The title must have 250 characters maximum")
+	private static String title;
+	
+	@EntityProperty
+	@MaxValidation(max = 350)
+	private static String description;
+	...
+}
+```
+
+As you can see, the only thing you have to do to add a maximum validation is to annotate the property with `@MaxValidation`; to use this annotation you must set the `max` parameter, but optionally you can also set the `value` parameter, which will be used as the exception message if an entity doesn't comply with the validation.
+
+jCrystal also supports the annotation `@MinValidation`.
+
+2. Add the default value for numViews like this:
+```java
+...
+@jEntity
+public class Article implements Entity{
+	...
+    @EntityProperty
+	private static int numViews = 0;
+	...
+}
+```
+
+As you can see, to set a default value you only have to set the value of that attribute. Easy, right? :grin: 
+
+3. To let jCrystal know that the `slug` must be unique, do this:
+```java
+...
+@jEntity
+public class Article implements Entity{
+	...
+    @EntityProperty(index = IndexType.UNIQUE_VERIFICATION)
+	private static String slug;
+	...
+}
+```
+The `index` parameter defines the type of index applied to this field; the value `UNIQUE_VERIFICATON` let's jCrystal know that each field value has only one entity and also jCrystal must ensure the uniqueness of that field.
+
+4. The property `createdAt` must save the date when the article was created. Even though you could initialize this attribute every time you create an Article, jCrystal can do it for you in this way:
+```java
+...
+@jEntity
+public class Article implements Entity{
+	...
+    @EntityProperty(autoNow=true)
+    private static CrystalDateTime createdAt;
+	...
+}
+```
+
+The autoNow parameter is only valid for attributes of these types:
+- `CrystalDate`
+- `CrystalDateMilis`
+- `CrystalDateSeconds`
+- `CrystalDateTime`
+- `CrystalTime`
+- `CrystalTimeMilis`
+- `CrystalTimeSeconds`
+
+When set to `true` the `autoNow` parameter automatically initializes the attribute with the current time when the instance of the entity is created.
