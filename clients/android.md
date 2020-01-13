@@ -23,7 +23,7 @@ After you write this configuration and run jCrystal, on your backend you will ha
 Tip: You can have multiple android clients for a project, all you have to do is add them with different ids and an annotation `@Client<your id>` will be generated.
 
 
-On your Android project, include the following changes on your rood build.gradle:
+On your Android project, include the following changes on your root build.gradle:
 ```gradle
 allprojects {
     repositories {
