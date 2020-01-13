@@ -136,7 +136,7 @@ Follow the next steps to add your Angular application as a client to your jCryst
 	}
     ```
 
-4. On the `addAngularExample()` method, change this string `"./angulargeneratedcode"` with the path of your Angular application in your computer followed by `src/app`. 
+4. On the `addAngularExample()` method, change this string `"./angulargeneratedcode"` with the path of your Angular application in your computer followed by `/src/app`. 
     
     Your method should now look like this:
 
@@ -148,7 +148,7 @@ Follow the next steps to add your Angular application as a client to your jCryst
 			//.setServerUrl(PROD_SERVER_URL);
 	}
     ```
-    Where `<AngularAppPath>` is path of your Angular application in your computer.
+    Where `<AngularAppPath>` is the path of your Angular application in your computer.
 
     This is what’s happening on each of the lines of the code above:
 
@@ -218,7 +218,7 @@ Let's go back to your Angular application. Follow the next steps to use the jCry
     }
     ```
 
-3. To use your service, only call it from a class named `ManagerHelloAngular`, like this:
+3. To use your web service, only call it from a class named `ManagerHelloAngular`, like this:
 
     ```typescript
     ...
@@ -239,7 +239,7 @@ Let's go back to your Angular application. Follow the next steps to use the jCry
 
     What did just happened? Why are you seeing a class named exactly like the class that you created on your **backend**?
  
-    That's all thanks to jCrystal! jCrystal generated for you everything you need to consume your service `helloWorldAngular` in a straight forward way! You just have to call a method and implement what happens if your request is successful or if and error happens. 
+    That's all thanks to jCrystal! jCrystal generated for you everything you need to consume your service `helloWorldAngular` in a straight forward way! You just have to call a method and implement what happens if your request is successful or if an error happens. 
 
     
 ## Test
