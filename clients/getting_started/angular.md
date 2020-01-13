@@ -53,6 +53,8 @@ Follow these steps to create a new Angular application:
     cd my-angular-app
     ```
 
+Now that you have an Angular application, go to the next section to set it up to use jCrystal.
+
 ### Set up an already created Angular application
 
 Follow these steps to set up an already created Angular application to support jCrystal:
