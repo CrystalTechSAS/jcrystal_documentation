@@ -162,7 +162,7 @@ Follow the next steps to add your Angular application as a client to your jCryst
     - Pressing `CTRL + 6` (Windows) or `CMD + 6` (Mac OS).
 
         or
-    - Pressing the jCrystal icon. <img src="../images/logo_min.png" alt="jCrystal Logo">
+    - Pressing the jCrystal icon. <img src="../../images/logo_min.png" alt="jCrystal Logo">
 
     Why is this necessary? Because jCrystal is going to create an annotation for your client, so you can annotate the web services that are going to be used by that client. We'll see it in the next section :wink:.
 
@@ -195,7 +195,7 @@ Follow the next steps to add a web service and tell jCrystal that your Angular c
     - Pressing `CTRL + 6` (Windows) or `CMD + 6` (Mac OS).
 
         or
-    - Pressing the jCrystal icon. <img src="../images/logo_min.png" alt="jCrystal Logo">
+    - Pressing the jCrystal icon. <img src="../../images/logo_min.png" alt="jCrystal Logo">
     
 5. Run your server by clicking on your project and selecting `Run As > App Engine`. 
 
