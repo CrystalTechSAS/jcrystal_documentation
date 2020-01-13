@@ -30,8 +30,8 @@ As a front-end developer, this means that:
 
 As was explained earlier, you can:
 
-- Create a new Angular application and set it up to use jCrystal.
-- Setup an already created Angular application.
+- [Create a new Angular application and set it up to use jCrystal.](#create-a-new-angular-application)
+- [Setup an already created Angular application.](#set-up-an-already-created-angular-application)
 
 ### Create a new Angular application 
 
@@ -299,12 +299,14 @@ Let's test that your Angular application communicates with your server:
 
      After a while, you should see an alert popping up with the message "Hello World to Angular from jCrystal!".
 
-Hurray! :Tada: You have created a web service on your backend and have used it on your frontend!
+Hurray! :tada: You have created a web service on your backend and have used it on your frontend!
 
 To do this, you didn't have to worry about:
 
 - Parsing the answer from the server.
-- Doing http calls on your front end for each web service that you create on your backend.
+- Doing http calls on your front end for the web service that you created on your backend.
+
+With jCrystal you will never have to worry about this things. :wink:
 
 Also, from now on, if you want to create a service that it's used by your Angular application you just have to:
 
@@ -313,11 +315,7 @@ Also, from now on, if you want to create a service that it's used by your Angula
 3. Run jCrystal.
 4. Call that method on your front end and implement what to do if the request is successful or failed.
 
-Easy, right? :grin:
 
 ## What's next
-- Did you encounter an error creating the app? Check our [troubleshooting](troubleshooting.md).
-- [jCrystal Paradigm](paradigm.md).
-- [Anatomy of a jCrystal project](anatomy.md).
-- [Learn more about web services](../server/webservices.md).
-- [Add a client to your app](../clients/general.md).
+- [Learn more about adding clients to your app](../../clients/general.md).
+- [Learn more about web services](../../server/webservices.md).
