@@ -1,5 +1,5 @@
 # jCrystal Framework (beta)
-_jCrystal_ is a fullstack framework based on code generators. It aims to reduce code re-write on web applications by reusing backend side data structures, business logic and web services to generate frontend equivalents.
+_jCrystal_ is a fullstack framework based on code generators. It aims to reduce code re-write on web and mobile applications by reusing backend side data structures, business logic and web services to generate frontend equivalents.
 
 ## What can you achieve with jCrystal?
 On the Server Side:
@@ -24,7 +24,8 @@ jCrystal has support for the following platforms:
 ## Getting Started
 - [Installation](getting_started/installation.md)
 - [Creating a new project](getting_started/creating_project.md)
-- [Running and testing your project](getting_started/run_test.md) 
+- [Running and testing your project](getting_started/run_test.md)
+- [Hello world on Angular](clients/getting_started/angular.md)
 - [Anatomy of a jCrystal project](getting_started/anatomy.md) 
 - [jCrystal's paradigm](getting_started/paradigm.md)
 - [Troubleshooting](getting_started/troubleshooting.md)

@@ -46,6 +46,7 @@ You are ready to start building! Let's create something amazing!
 
 ## What's next
 - Did you encounter an error creating the app? Check our [troubleshooting](troubleshooting.md).
+- Ready to add an Angular application to your project? Check the [hello world on Angular](../clients/getting_started/angular.md).  
 - [jCrystal Paradigm](paradigm.md).
 - [Anatomy of a jCrystal project](anatomy.md).
 - [Learn more about web services](../server/webservices.md).
