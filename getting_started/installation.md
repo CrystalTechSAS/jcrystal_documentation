@@ -2,9 +2,9 @@
 
 ## Requirements 
 
-jCrystal requires **Java 1.8** or higher.
+jCrystal requires **Java versions between 1.8 and 1.11**.
 
-You can check whether you have Java 1.8 or higher, by entering the following command on a terminal:
+You can check your java version by entering the following command on a terminal:
 
 ```
 java -version
