@@ -45,7 +45,7 @@ android {
 }
 dependencies {
     ...
-    implementation 'com.github.CrystalTechSAS:jCrystalAndroidLib:342e96e77d'
+    implementation 'com.github.CrystalTechSAS:jCrystalAndroidLib:b1499a6f2b'
 }
 ```
 
@@ -74,6 +74,7 @@ import jcrystal.mobile.net.controllers.ManagerHello;
     }, error -> {
 		//On error
 	});
+
 ```
 
 Where `this` can be an `Activity` or `Fragment`.
@@ -96,6 +97,7 @@ public class MyActivity extends Activity implements OnErrorListener {
 	public void onError(RequestError error) {
 		//On error
     }
+	...
 }
 ```
 
