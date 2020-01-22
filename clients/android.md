@@ -74,6 +74,7 @@ import jcrystal.mobile.net.controllers.ManagerHello;
     }, error -> {
 		//On error
 	});
+
 ```
 
 Where `this` can be an `Activity` or `Fragment`.
@@ -96,6 +97,7 @@ public class MyActivity extends Activity implements OnErrorListener {
 	public void onError(RequestError error) {
 		//On error
     }
+	...
 }
 ```
 
