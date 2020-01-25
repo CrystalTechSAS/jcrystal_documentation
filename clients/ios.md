@@ -2,6 +2,7 @@
 
 ## Setup
 
+### Back-end
 On your backend, add an iOS client to your _JCrystalConfig_ file: 
 
 ```java
@@ -17,17 +18,10 @@ public class JCrystalConfig {
 }
 ```
 
-After you write this configuration and run jCrystal, on your backend you will have a new annotation available: `@@ClientIOS` which you can use to annotate the web services that will be used by the iOS client.
+After you write this configuration and run jCrystal, on your backend you will have a new annotation available: `@ClientIOS` which you can use to annotate the web services that will be used by the iOS client.
 
 Tip: You can have multiple iOS clients for a project, all you have to do is add them with different ids and an annotation `@Client<your id>` will be generated.
 
-Add to your iOS project:
-- The framework `jCrystaliOSLib.framework`.
-- The files of the jCrystal generated folder.
-
-Important: As of now, you have to remove the reference to the jCrystal folder from your project and add it again to see the new files. 
-
-## Web Services
 Whenever you want a WS to be used by your iOS client, you only have to annotate it with the iOS generated annotation on your backend:
 
 ```java
@@ -41,6 +35,18 @@ public class ManagerHello {
 	}
 }
 ```
+
+Remember to Run jCrystal to generate the client files. 
+
+### iOS project
+
+1. 
+Add to your iOS project:
+- The framework `jCrystaliOSLib.framework`.
+- The files of the jCrystal generated folder.
+
+
+## Web Services
 
 After you define a method, class or package annotated with the generated iOS annotation and run jCrystal, code will be generated and you will have to add the new files to your iOS project. Then you can call your web services in the following way:
 
