@@ -39,12 +39,22 @@ public class ManagerHello {
 Remember to Run jCrystal to generate the client files. 
 
 ### iOS project
+Please do this setup **after** you have created the `@ClientiOS` annotation, annotated a method with it and have successfully run jCrystal.
 
-1. 
-Add to your iOS project:
-- The framework `jCrystaliOSLib.framework`.
-- The files of the jCrystal generated folder.
+1. Open your iOS project on Xcode.
+2. Right-click on your project and select "Add files to <Your Project Name>...".
+3. On the dialog:
+	1. Search and select the jCrystal folder which should be on the root folder of your project. 
+	2. Select the option "Create folder references".
+	3. Click **Add**.
+4. Go to your project's target general settings and on the "Frameworks, Libraries and Embedded Content" section click "+".
 
+<img src="../images/ios_frameworks.png" alt="Frameworks">
+
+5. On the dialog, select jCrystal and click **Add**. 
+<img src="../images/ios_jcrystal.png" alt="Add dialog">
+
+Now you can integrate with your backend. 
 
 ## Web Services
 
