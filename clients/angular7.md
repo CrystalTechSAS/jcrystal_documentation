@@ -72,6 +72,7 @@ After you define a method, class or package annotated with the generated Angular
 
 ```typescript
 ...
+import { ManagerHello } from './jcrystal/services/ManagerHello';
 import { HttpClient } from '@angular/common/http';
 export class MyComponent {
 	constructor(public http: HttpClient) { }
@@ -85,12 +86,17 @@ export class MyComponent {
 }
 ```
 
-Take into account that on your component constructor you must add `public http : HttpClient`.
+Take into account that on your component constructor you must add `public http : HttpClient`. Also remember to import the class of your web service in your component
 
 jCrystal can manage the error handling by showing an alert with the error message if a web service returns an error. Therefore, if you want jCrystal to manage errors, you don't have to implement the error callback:
 
 
 ```typescript
+...
+import { HttpClient } from '@angular/common/http';
+export class MyComponent {
+	constructor(public http: HttpClient) { }
+...
     ManagerHello.ping(this, resp => {
         //On success
     });
