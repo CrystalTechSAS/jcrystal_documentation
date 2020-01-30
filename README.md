@@ -5,34 +5,25 @@ jCrystal is a framework to build **full-stack platforms** more **quickly** and w
 jCrystal makes it easier to build **long-lasting backends**:
 
 - **RESTful web services made easy**: One method is one web service, that's all. 
-    
-    No need to edit multiple files to create one web service, no need to worry about parsing params or the body in a request. 
 
-- **Straightforward database storage and access**: write your data model, jCrystal does everything else. 
+- **Straightforward database storage and access**: Write your data model, jCrystal does everything else. 
 
-    No need to worry about tables, schemas or migrations. 
+- **Painless user authentication and authorization**: Authenticate your users, manage their sessions and authorize their actions without all the hassle. 
 
-- **Painless user authentication and authorization**: authenticate your users, manage their sessions and authorize their actions without all the hassle. 
-
-- **Admin site**: easily get an admin interface to manage the content of your backend.
+- **Admin site**: Easily get an admin interface to manage the content of your backend.
 
 - **Effortlessly** build your backend over a **highly-scalable NoSQL database and a highly-available infrastructure**.
 
-    No configurations, by default that's your infrastructure. 
-
-jCrystal helps you build **front-end apps on top of your backend** (or any backend):
+jCrystal helps you build **frontend apps on top of your backend** (or any backend):
 
 - **Painless consumption of web services**: jCrystal generates the code to easily integrate with your web services. 
 
-    No more long files with documentation of your web services, no need to worry about parsing params or the body of a request. 
 
-- **Effortless access to your data model**: jCrystal generates your data model on your front-end language. 
-
-    No need to repeat yourself and write the same data model on both back-end and each front-end app. 
+- **Effortless access to your data model**: jCrystal generates your data model on your frontend language. 
 
 - **Simple access to the local database:** jCrystal saves stores and retrieves your information, no need to worry about your local database anymore. 
 
-jCrystal does this and more because it's a framework based on **code generators**. In this way, jCrystal reduces code re-write web and mobile applications by reusing backend side data structures, business logic and web services to generate frontend equivalents.
+jCrystal does this and more because it's a framework based on **code generators**. In this way, jCrystal reduces code re-write web and mobile applications by reusing backend side data structures, business logic, and web services to generate frontend equivalents.
 
 jCrystal has support for the following platforms:
 - iOS 12^ (Using Swift 5)
@@ -44,13 +35,24 @@ jCrystal has support for the following platforms:
 Our beta allows you to write your backend in Java and deploy it over Google App Engine using Google Datastore database (legacy).
 
 ## Getting Started
+### Backend
 - [Installation](getting_started/installation.md)
 - [Creating a new project](getting_started/creating_project.md)
 - [Running and testing your project](getting_started/run_test.md)
-- [Hello world on Angular](clients/getting_started/angular.md)
+- Create a hello world with a client (backend + frontend):
+    - [Angular](getting_started/hello_clients/angular.md)
+    - [Android](getting_started/hello_clients/android.md)
 - [Anatomy of a jCrystal project](getting_started/anatomy.md) 
 - [jCrystal's paradigm](getting_started/paradigm.md)
 - [Troubleshooting](getting_started/troubleshooting.md)
+
+### Frontend
+- [Working with jCrystal (must read)]()
+- [Angular 7](getting_started/setup_clients/angular7.md)
+- [Android](getting_started/setup_clients/android.md)
+- [iOS](getting_started/setup_clients/ios.md)
+- [jQuery](getting_started/setup_clients/jQuery.md)
+
 
 <!--
 ## Tutorial

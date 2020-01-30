@@ -9,21 +9,21 @@ jCrystal is a full-stack framework that aims to reduce code rewrites, moreover, 
 - Access your web services with zero effort.
 - Access your objects model with zero effort.
 
-As a front-end developer, this means that:
+As a frontend developer, this means that:
 
-- You **can use your own code editor for your front-end client**.
+- You **can use your own code editor for your frontend client**.
 
-    Feel free to use the code editor that you are most familiar with on your client-side. jCrystal is here to make you **faster** (we'll soon see how!), not to force you to change everything you know about front-end development
+    Feel free to use the code editor that you are most familiar with on your client-side. jCrystal is here to make you **faster** (we'll soon see how!), not to force you to change everything you know about frontend development
 
-- You are in charge of creating your front-end project.
+- You are in charge of creating your frontend project.
 
-    jCrystal will make everything easier for you, but you are still in charge of creating your front-end project. Don't worry, that only means you can customize it as much as you want!
+    jCrystal will make everything easier for you, but you are still in charge of creating your frontend project. Don't worry, that only means you can customize it as much as you want!
 
-    That also means jCrystal can be used on a front-end project that's already created.
+    That also means jCrystal can be used on a frontend project that's already created.
 
 - You are in charge of setting up the project to support jCrystal.
 
-    Don't worry, this usually means adding a couple of dependencies to your front-end project. :wink:
+    Don't worry, this usually means adding a couple of dependencies to your frontend project. :wink:
 
 
 ## Setting up your Android application
@@ -60,7 +60,7 @@ You are ready to use jCrystal on your Android application! :tada:
 ## Adding and using a client in your jCrystal project
 Now that your Android application is ready to use jCrystal, we are going to go back to your **jCrystal project** on Eclipse. 
 
-Why? Because we need to tell your backend jCrystal project that it has a front-end project or **client** related. jCrystal supports multiple platforms and each project of a platform is what we call a **client**. 
+Why? Because we need to tell your backend jCrystal project that it has a frontend project or **client** related. jCrystal supports multiple platforms and each project of a platform is what we call a **client**. 
 
 ### Adding a client in your jCrystal project
 Follow the next steps to add your Android application as a client to your jCrystal project:
