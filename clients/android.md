@@ -45,7 +45,7 @@ android {
 }
 dependencies {
     ...
-    implementation 'com.github.CrystalTechSAS:jCrystalAndroidLib:342e96e77d'
+    implementation 'com.github.CrystalTechSAS:jCrystalAndroidLib:b1499a6f2b'
 }
 ```
 
