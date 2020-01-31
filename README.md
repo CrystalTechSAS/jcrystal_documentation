@@ -47,11 +47,11 @@ Our beta allows you to write your backend in Java and deploy it over Google App 
 - [Troubleshooting](getting_started/troubleshooting.md)
 
 ### Frontend
-- [Working with jCrystal (must read)]()
+- [Working with jCrystal (must read)](getting_started/working_frontend.md)
 - [Angular 7](getting_started/setup_clients/angular7.md)
 - [Android](getting_started/setup_clients/android.md)
 - [iOS](getting_started/setup_clients/ios.md)
-- [jQuery](getting_started/setup_clients/jQuery.md)
+<!-- - [jQuery](getting_started/setup_clients/jQuery.md)-->
 
 
 <!--
