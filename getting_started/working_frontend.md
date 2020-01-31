@@ -1,4 +1,4 @@
-# Working with jCrystal on frontend
+# Working with jCrystal on the frontend
 
 jCrystal is a full-stack framework that aims to reduce code rewrites, moreover, on your frontend clients it will help you:
 
@@ -23,3 +23,9 @@ jCrystal generates utility code usually in one folder and one or more sets of fi
 - You are in charge of setting up the project to support jCrystal.
 
     Don't worry, this usually means adding a couple of dependencies to your frontend project. :wink:
+
+## What's next
+Setup your frontend app to use jCrystal:
+- [Angular](../frontend/angular/setup.md).
+- [Android](../frontend/android/setup.md).
+- [iOS](../frontend/ios/setup.md).
