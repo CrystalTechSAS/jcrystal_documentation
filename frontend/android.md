@@ -1,6 +1,27 @@
-# Android
+# Android guide
 
 ## Setup
+
+On your backend, add an Android client to your _JCrystalConfig_ file: 
+
+```java
+...
+public class JCrystalConfig {
+	public static void config(){
+		...
+		CLIENT.addAndroid("android")  //you can use your custom id
+			//.enableFirebasCrashReporting()
+			.setOutput("../AndroidApp/app/src/main/java")  //Point this to your android project src folder
+			.setServerUrl("https://yourserver.com/");
+    	...
+	}
+}
+```
+
+After you write this configuration and run jCrystal, on your backend you will have a new annotation available: `@ClientAndroid` which you can use to annotate the web services that will be used by the android client.
+
+Tip: You can have multiple android clients for a project, all you have to do is add them with different ids and an annotation `@Client<your id>` will be generated.
+
 
 On your Android project, include the following changes on your root build.gradle:
 ```gradle
@@ -28,8 +49,6 @@ dependencies {
 }
 ```
 
-## Folder structure
-
 ## Web Services
 Whenever you want a WS to be used by your android client, you only have to annotate it with the android generated annotation on your backend:
 
@@ -45,7 +64,7 @@ public class ManagerHello {
 }
 ```
 
-After you define a method, class or package annotated with the generated android annotation and run jCrystal, code will be generated and added to your android project. Then you can call your web services in the following way:
+After you define a method, class or package annotated  with the generated android annotation and run jCrystal, code will be generated and added to your android project. Then you can call your web services in the following way:
 
 ```java
 import jcrystal.mobile.net.controllers.ManagerHello;
