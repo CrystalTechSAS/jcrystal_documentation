@@ -78,13 +78,14 @@ export class MyComponent {
 ## What does jCrystal generate? 
 The generated folder of jCrystal in Angular looks like this:
 
+```
 jcrystal/
 ├── entities/
 │   ├── enums/
 │   └── jCrystalConfig.java
 ├── services/
 └── JSONUtils.ts
-
+```
 
 Feel free to look at each of the files and folders, but remember that since this is a generated folder, any change on these files will be removed the next time the code is generated.
 

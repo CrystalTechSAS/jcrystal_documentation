@@ -2,7 +2,7 @@
 
 ## Setup
 
-The generated code of jCrystal must be added on the root folder of your iOS application.
+The generated code of jCrystal must be added on the **root folder** of your iOS application.
 
 1. Open your iOS project on Xcode.
 2. Right-click on your project and select "Add files to <Your Project Name>...".
@@ -15,6 +15,7 @@ The generated code of jCrystal must be added on the root folder of your iOS appl
 <img src="../../images/ios_frameworks.png" alt="Frameworks">
 
 5. On the dialog, select jCrystal and click **Add**. 
+
 <img src="../../images/ios_jcrystal.png" alt="Add dialog">
 
 Now you can integrate with your backend. 
