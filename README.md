@@ -47,7 +47,7 @@ Our beta allows you to write your backend in Java and deploy it over Google App 
 - [Troubleshooting](getting_started/troubleshooting.md)
 
 ### Frontend
-- [Working with jCrystal on the frontend(must read)](getting_started/working_frontend.md)
+- [Working with jCrystal on the frontend (must read)](getting_started/working_frontend.md)
 - Setup your frontend app:
     - [Angular 7](frontend/angular/setup.md)
     - [Android](frontend/android/setup.md)

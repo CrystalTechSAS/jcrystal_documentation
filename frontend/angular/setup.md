@@ -1,6 +1,6 @@
-# Angular 7 guide
+# Setup on Angular
 
-## Setup
+## Setup project
 
 On your Angular project add an AppConfiguration class on `src/app/utils/app-configuration.ts`:
 
@@ -30,13 +30,13 @@ Include the following dependencies using npm:
 
 ```
 npm install moment --save
-npm install sweetalert2 --save
+npm install sweetalert2 --s ave
 ```
 If you use a different package manager, please check how to add these dependencies on these websites: 
 - [moment.js](https://momentjs.com/)
 - [sweetalert2](https://github.com/sweetalert2/sweetalert2)
 
-## Adding the jCrystal generated code to your project
+## Add jCrystal generated code
 The generated code of jCrystal must be added in the folder: `src/app` of your Angular application. 
 
 ## Consuming web services
@@ -75,30 +75,21 @@ export class MyComponent {
 }
 ```
 
-## What does jCrystal generate? 
-The generated folder of jCrystal in Angular looks like this:
+How do you know which services you can access and what are their names? There are a couple of ways:
 
-```
-jcrystal/
-├── entities/
-│   ├── enums/
-│   └── jCrystalConfig.java
-├── services/
-└── JSONUtils.ts
-```
+- Check the backend or talk with your backend developer. 
 
-Feel free to look at each of the files and folders, but remember that since this is a generated folder, any change on these files will be removed the next time the code is generated.
+    The structure and names of the web services on the backend and the frontend are the same. 
 
-### Entities folder
+    This means that if on the backend there's web service named `getUser` on the class `ManagerUser.java` and this service is annotated to be used by your client, then on your generated code you must have a class named `ManagerUser.ts` with a static method named `getUser`.
 
-The entities folder contains all the .ts files of the data models that are used by the web services of your client. Please take into account that this means that not all the jEntities on the backend are generated on typescript, jCrystal only creates the data models that are needed because they are used on some web service.
+    Learn more about coding web services on the backend and annotating them to use clients [here](../../server/clients/general.md).
 
-### Enums folder
-This folder contains the .ts files of the enumerations that are used by the web services of your client. This folder might not be generated if the backend doesn't use any enumeration.
+- Check the generated code. 
+    
+    On the generated code you can find the web services that you can use; specifically, on the folder `jcrystal/services/` inside classes with `Manager` as a prefix, each of the static methods of these classes are webservices that you can consume.
 
-### Services folder
-This folder contains the .ts files of the web services used by your client and some helper classes to consume those web services.
-The classes that you need to use to consume the web services start with "Manager"; inside of them, you will find static methods to call a web service.
+    Learn more about the anatomy of the generated code [here](anatomy.md).
 
-### JSONUtils.ts
-This file contains utilities to transform objects into JSON. You don't need to use this class.
+
+
