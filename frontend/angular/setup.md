@@ -75,13 +75,13 @@ export class MyComponent {
 }
 ```
 
-How do you know which services you can access and what are their names? There are a couple of ways:
+How do you know which services you can access, what are their names, inputs and outpus? There are a couple of ways:
 
 - Check the backend or talk with your backend developer. 
 
     The structure and names of the web services on the backend and the frontend are the same. 
 
-    This means that if on the backend there's web service named `getUser` on the class `ManagerUser.java` and this service is annotated to be used by your client, then on your generated code you must have a class named `ManagerUser.ts` with a static method named `getUser`.
+    This means that if on the backend there's web service named `getUser` on the class `ManagerUser.java` and this service is annotated to be used by your client, then on your generated code, you must have a class named `ManagerUser.ts` with a static method named `getUser`.
 
     Learn more about coding web services on the backend and annotating them to use clients [here](../../server/clients/general.md).
 
