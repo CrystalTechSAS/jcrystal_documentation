@@ -4,8 +4,7 @@ The generated folder of jCrystal in Angular looks like this:
 ```
 jcrystal/
 ├── entities/
-│   ├── enums/
-│   └── jCrystalConfig.java
+│   └── enums/
 ├── services/
 └── JSONUtils.ts
 ```

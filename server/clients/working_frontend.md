@@ -15,7 +15,7 @@ All of these alternatives can work! The important thing to keep in mind is to al
 The process to work on a back-end considering there is another team working on the frontend is the following:
 
 1. Fetch all the repositories of the frontend projects on your local PC.
-2. Setup on your ``jCrystalConfig.java`` each client for the frontend projects, where the output is set to the repository folder of each frontend. Examples:
+2. Setup on your `jCrystalConfig.java` each client for the frontend projects, where the output is set to the repository folder of each frontend. Examples:
     Angular
     ```java
     ...
@@ -59,7 +59,7 @@ The process to work on a back-end considering there is another team working on t
     ```
 
 
-3. Run jCrystal to create each client annotation. After this step, you will have an annotation for each client that you added on  ``jCrystalConfig.java``, like ``@ClientWeb``.
+3. Run jCrystal to create each client annotation. After this step, you will have an annotation for each client that you added on  `jCrystalConfig.java`, like `@ClientWeb`.
 
 4. Create web services on your back-end and annotate them with your client's annotation whenever that client uses that service.
 
