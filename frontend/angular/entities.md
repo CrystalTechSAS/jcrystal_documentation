@@ -2,7 +2,7 @@
 
 ## Basics
 
-jCrystal generates the .ts files of the entities (data model) required to communicate with the backend, you can find them in the jCrystal generated folder: jcrystal/entities. One jEntity (entity) will generate several related files on your Angular project: 
+jCrystal generates the .ts files of the entities (data model) required to communicate with the backend, you can find them in the jCrystal generated folder: `jcrystal/entities`. One jEntity (entity) will generate several related files on your Angular project: 
 
 - One class that has all the attributes, methods to access them and change them as well as utility methods.
 - One or more interfaces that specify the access level of the entity. This will help you know what level of detail will be required or received by the web service. 
