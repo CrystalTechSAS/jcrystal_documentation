@@ -65,6 +65,7 @@ jCrystal can manage the error handling by showing an alert with the error messag
 
 ```typescript
 ...
+import { ManagerHello } from './jcrystal/services/ManagerHello';
 import { HttpClient } from '@angular/common/http';
 export class MyComponent {
 	constructor(public http: HttpClient) { }

@@ -23,7 +23,27 @@ Specifically, the parameters of a static method to consume a web service are the
 
 - An `onSuccess` function that is called when the HTTP request is successful. It has this form: `(<return params>) => void`, where `<return params>` are the objects and their types that the backend returns for this web service or void if it doesn't return anything.
 
-- A `onError` function that is called when the HTTP request fails in any way. This parameter has a default value, so you don't have to provide the onError function if you prefer that jCrystal manages the error (it shows an alert with the error).
+- A `onError` function that is called when the HTTP request fails in any way. This parameter has a **default value**, so you don't have to provide the onError function if you prefer that jCrystal manages the error (it shows an alert with the error).
+
+## Error management
+
+jCrystal can manage the error handling by showing an alert with the error message if a web service returns an error. Therefore, if you want jCrystal to manage errors, you don't have to implement the error callback. 
+
+As an example, if you have a `ping` method of a class generated with jCrystal, you 
+
+```typescript
+...
+import { ManagerHello } from './jcrystal/services/ManagerHello';
+import { HttpClient } from '@angular/common/http';
+export class MyComponent {
+	constructor(public http: HttpClient) { }
+...
+    ManagerHello.ping(this, resp => {
+        //On success
+    });
+}
+```
+
 
 ## Sending and receiving entities
 On jCrystal web services can send and receive entities, however, we prioritize always sending or receiving exactly the information that is required on each web service. That's why when a web service sends or receives an entity, the type of the parameter that contains the entity is not the class of the entity in typescript, but an interface which is a level of the entity. For example, instead of receiving the type   `User`, you will receive something like `UserBasic` or `UserMin`.
@@ -190,15 +210,40 @@ export class MyComponent {
 ```
 Additionally, don't forget to add `public http : HttpClient` on your component constructor. Also remember to import the class of your web service in your component.
 
-**Web service with three parameters and returns an Entity**
-	static createUser(base : NetworkBase,name:string,email:string,onSuccess: (r:UserNormal)=> void ,onError : (error : RequestError)=>void = defaultOnError){
+**Web service with two parameters and returns an Entity** 
 
-ManagerDemo.createUser(this, "John Doe", "john@test.com", (user)=> {
+A service that receives the user name and email and returns the entity created on the backend can have this signature:
 
+```typescript
+...
+export class ManagerTest{
+	/**
+	* /api/test/createUser
+	**/
+    static createUser(base : NetworkBase,name:string,email:string,onSuccess: (r:UserNormal)=> void ,onError : (error : RequestError)=>void = defaultOnError){
+            ...
+    }
+    ...
+```
+
+As you can see, after the parameter `NetworkBase` there is a string parameter named `name` and `email`; also, the `onSuccess` is a function of type `(r:UserNormal) => void`, meaning that this web service returns an entity User with access level normal.
+
+```typescript
+...
+import { ManagerTest } from './jcrystal/services/ManagerTest';
+import { HttpClient } from '@angular/common/http';
+export class MyComponent {
+	constructor(public http: HttpClient) { }
+...
+    ManagerTest.createUser(this, "John Doe", "john@test.com",  (user) => {
+        //On success
     }, error => {
-
+        //On error
     });
-
+...
+}
+```
+Don't forget to add `public http : HttpClient` on your component constructor. Also remember to import the class of your web service in your component.
 
 **Web service with one parameter and multiple returns**
 
