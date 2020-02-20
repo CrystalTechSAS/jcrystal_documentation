@@ -3,13 +3,17 @@ The generated folder of jCrystal in Angular looks like this:
 
 ```
 jcrystal/
+├── dates/
 ├── entities/
-│   └── enums/
+├── enums/
 ├── services/
 └── JSONUtils.ts
 ```
 
 Feel free to look at each of the files and folders, but remember that since this is a generated folder, any change on these files will be removed the next time the code is generated.
+
+### The **`jcrystal/dates`** folder
+This folder contains the .ts file of the classes used on jCrystal to represent dates and times.
 
 ### The **`jcrystal/entities`** folder
 
@@ -17,7 +21,7 @@ The entities folder contains all the .ts files of the data models that are used 
 
 Please take into account that this means that not all the jEntities on the backend are generated on typescript, jCrystal only creates the data models that are needed because they are used on some web service.
 
-### The **`jcrystal/entities/enums`** folder
+### The **`jcrystal/enums`** folder
 This folder contains the .ts files of the enumerations that are used by the web services of your client. This folder might not be generated if the backend doesn't use any enumeration.
 
 ### The **`jcrystal/services`** folder

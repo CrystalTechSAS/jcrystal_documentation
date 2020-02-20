@@ -91,6 +91,7 @@ How do you know which services you can access, what are their names, inputs and 
 
     Learn more about the anatomy of the generated code [here](anatomy.md).
 
+    Additionally, we suggest that you use a code editor that has auto-completion capabilities and helps you check the signature of a method easily.
 
 ## What's next
 After you have set up your Angular client, you are ready to use the generated code. 

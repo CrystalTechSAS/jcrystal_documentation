@@ -34,7 +34,7 @@ As an example, if an entity User has these attributes:
 - City
 - Favorite color
 
-Let's say that on the frontend you need to list all the users and show the name and last login; then, you don't need to receive all the attributes of the users, so the backend developer might say that the minimum attributes of User are Name and Last Login. Additionally, the web service that gives you the list of all users on the frontend will return a list of the interface UserMin.
+Let's say that on the frontend you need to list all the users and show the name and last login; then, you don't need to receive all the attributes of the users, so the backend developer might say that the attributes Name and Last Login will comprise the "Min" level of the entity User; therefore, the generated interface UserMin.ts will contain only those attributes and methods to access and modify them. Additionally, the web service that gives you the list of all users on the frontend will return a list of the interface UserMin.
 
 **So how does this help you?** When you have a service that returns a list of the interface UserMin, then for each User you only will be able to access their attributes Name and Last Login. In this way, jCrystal helps you avoid common mistakes, when you try to access attributes that the entity doesn't have.
 
@@ -66,7 +66,7 @@ let user = (userMin as User);
 Finally, always remember to **import** the class of your entity on the component or class that uses it.
 
 ### Utility classes
-//TODO
+Coming soon :flushed:
 
 ## Special entities
 
