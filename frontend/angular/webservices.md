@@ -191,7 +191,20 @@ export class MyComponent {
 Additionally, don't forget to add `public http : HttpClient` on your component constructor. Also remember to import the class of your web service in your component.
 
 **Web service with three parameters and returns an Entity**
+	static createUser(base : NetworkBase,name:string,email:string,onSuccess: (r:UserNormal)=> void ,onError : (error : RequestError)=>void = defaultOnError){
+
+ManagerDemo.createUser(this, "John Doe", "john@test.com", (user)=> {
+
+    }, error => {
+
+    });
 
 
 **Web service with one parameter and multiple returns**
 
+	static getAllArticlesUsers(base : NetworkBase,name:string,onSuccess: (p0:UserNormal[], p1:ArticleNormal[]) => void,onError : (error : RequestError)=>void = defaultOnError){
+
+
+ManagerDemo.getAllArticlesUsers(this, "nu", (users, articles) => {
+
+    });
