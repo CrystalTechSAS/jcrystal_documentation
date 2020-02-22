@@ -29,7 +29,7 @@ Specifically, the parameters of a static method to consume a web service are the
 
 jCrystal can manage the error handling by showing an alert with the error message if a web service returns an error. Therefore, if you want jCrystal to manage errors, you don't have to implement the error callback. 
 
-As an example, if you have a `ping` method of a class generated with jCrystal, you 
+As an example, if you have a `ping` method of a class generated with jCrystal, you can implement the onSuccess function and not the onError.
 
 ```typescript
 ...
@@ -44,6 +44,7 @@ export class MyComponent {
 }
 ```
 
+If you do this how do you know when an error with a request happens?
 
 ## Sending and receiving entities
 On jCrystal web services can send and receive entities, however, we prioritize always sending or receiving exactly the information that is required on each web service. That's why when a web service sends or receives an entity, the type of the parameter that contains the entity is not the class of the entity in typescript, but an interface which is a level of the entity. For example, instead of receiving the type   `User`, you will receive something like `UserBasic` or `UserMin`.
@@ -246,6 +247,7 @@ export class MyComponent {
 Don't forget to add `public http : HttpClient` on your component constructor. Also remember to import the class of your web service in your component.
 
 **Web service with one parameter and multiple returns**
+A service that receives the user name and email and returns the entity created on the backend can have this signature:
 
 	static getAllArticlesUsers(base : NetworkBase,name:string,onSuccess: (p0:UserNormal[], p1:ArticleNormal[]) => void,onError : (error : RequestError)=>void = defaultOnError){
 
@@ -253,3 +255,12 @@ Don't forget to add `public http : HttpClient` on your component constructor. Al
 ManagerDemo.getAllArticlesUsers(this, "nu", (users, articles) => {
 
     });
+
+
+En los últimos años frameworks hechos en lenguajes de programación como Python y Ruby, han logrado lle
+En los últimos años fram hechos en lenguajes de programación como ruby, han logrado llevarse el protagonismo en el mercado debido a ideas novedosas que han implementado en los procesos de desarrollo.
+ Estos frameworks fueron populares, hubo unas ideas novedosas y apesar de que han habido intentos de llevar a Java esas ideas, queda la sensasi´ón de que la gente prefiere en algunas situacioens las ganancias de esas ideas que producen en otros lenguajes, las ideas que utlizan esos fm en otros lenguajes en contraposición a la manetenbilidad y al deseme
+
+
+
+jCrystal es un paso en la dirección de llevar a Java la simplesa y las buenas ideas de estos frameworks de programación de otras leguajes y de llvarlos más alla aprovechando las características superiores de Java como elnguaje
