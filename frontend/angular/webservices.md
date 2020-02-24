@@ -247,9 +247,12 @@ Don't forget to add `public http : HttpClient` on your component constructor. Al
 
 **Web service with one parameter and multiple returns**
 
+Finally, let's see a case where the web service has multiple returns. 
+
+```typescript
 	static getAllArticlesUsers(base : NetworkBase,name:string,onSuccess: (p0:UserNormal[], p1:ArticleNormal[]) => void,onError : (error : RequestError)=>void = defaultOnError){
 
-
+```
 ManagerDemo.getAllArticlesUsers(this, "nu", (users, articles) => {
 
     });
