@@ -95,7 +95,7 @@ The first approach is safer because by using the interface, you can only access 
 
 ## FAQ
 
-**How to know if the web service es GET, POST, PUT or DELETE?**
+**How to know if a web service es GET, POST, PUT or DELETE?**
 
 You no longer have to worry about that! :grin: jCrystal was created to help you communicate with the server, therefore the only thing you have to worry about is calling the method to consume the web service and jCrystal will do everything else for you. If you really want to know, you can check the generated code to find out the type of HTTP request for each web service.
 

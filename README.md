@@ -70,11 +70,10 @@ Our beta allows you to write your backend in Java and deploy it over Google App 
 - [Authentication  and Autorization](server/auth.md)
 - [Entities and DB access](server/entities.md)
 - [Async jobs, queues and crons](server/queues.md) (optional)
+<!-- - [General](clients/general.md) (Must read!!!) -->
 
 ### Frontend
-
-- [General](clients/general.md) (Must read!!!)
-- [Angular 7](clients/angular7.md)
+- [Angular 7](frontend/angular/general.md)
 - [Android](clients/android.md)
 - [iOS](clients/ios.md)
 - [jQuery](clients/jQuery.md)
