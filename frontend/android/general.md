@@ -1,5 +1,5 @@
 # Android 
-If you haven't already, please read [this guide](/getting_started/working_frontend.md). 
+If you haven't already, please read [this guide](./getting_started/working_frontend.md). 
 
 Learn more about:
 - [How to setup your Android app.](setup.md)
