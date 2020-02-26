@@ -5,7 +5,7 @@ jCrystal is a full-stack framework that aims to reduce code rewrites, moreover, 
 - Access your web services with zero effort.
 - Access your data model with zero effort.
 
-This will be possible thanks to the code that jCrystal generates using the **descriptions of the web services and entities of the backend**. As such, please take into account that to use jCrystal on your frontend you **must** have a backend in jCrystal that has and uses frontend clients. If you already have a backend, please read [this guide to learn how to add clients to your backend](../clients/general.md).
+This will be possible thanks to the code that jCrystal generates using the **descriptions of the web services and entities of the backend**. As such, please take into account that to use jCrystal on your frontend you **must** have a backend in jCrystal that has and uses frontend clients. If you already have a backend, please read [this guide to learn how to add clients to your backend](../server/clients/general.md).
 
 
 jCrystal generates utility code usually in one folder and one or more sets of files depending on the frontend platform.  As a frontend developer, this means that:

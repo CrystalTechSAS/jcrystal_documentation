@@ -133,10 +133,10 @@ The signature of the web service:
 ```typescript
 ...
 export class ManagerTest{
-/**
-* /api/test/doInitialSetup
-**/
-static doInitialSetup(base : NetworkBase,onSuccess: () => void,onError : (error : RequestError)=>void = defaultOnError){
+    /**
+    * /api/test/doInitialSetup
+    **/
+    static doInitialSetup(base : NetworkBase,onSuccess: () => void,onError : (error : RequestError)=>void = defaultOnError){
         ...
     }
     ...

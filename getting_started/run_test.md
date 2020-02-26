@@ -50,4 +50,4 @@ You are ready to start building! Let's create something amazing!
 - [jCrystal Paradigm](paradigm.md).
 - [Anatomy of a jCrystal project](anatomy.md).
 - [Learn more about web services](../server/webservices.md).
-- [Add a client to your app](../clients/general.md).
+- [Add a client to your app](../server/clients/general.md).

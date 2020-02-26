@@ -210,5 +210,5 @@ Also, from now on, if you want to create a service that it's used by your Androi
 
 
 ## What's next
-- [Learn more about adding clients to your app](../../clients/general.md).
+- [Learn more about adding clients to your app](../../server/clients/general.md).
 - [Learn more about web services](../../server/webservices.md).
