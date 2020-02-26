@@ -28,4 +28,4 @@ jCrystal generates utility code usually in one folder and one or more sets of fi
 Setup your frontend app to use jCrystal:
 - [Angular](../frontend/angular/setup.md).
 - [Android](../frontend/android/setup.md).
-- [iOS](../frontend/ios/setup.md).
+- [iOS](../frontend/iOS/setup.md).
