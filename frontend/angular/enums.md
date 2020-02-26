@@ -1,6 +1,6 @@
 # Enumerations
 
-jCrystal generates the .ts files of the enumerations required to communicate with the backend, you can find them in the jCrystal generated folder: `jcrystal/entities/enums`. Each enumeration used by the web services generates one class in typescript with the same attributes that the enumeration has on the backend. 
+jCrystal generates the .ts files of the enumerations required to communicate with the backend, you can find them in the jCrystal generated folder: `jcrystal/enums`. Each enumeration used by the web services generates one class in typescript with the same attributes that the enumeration has on the backend. 
 
 All the values of an enumeration have at least two attributes by default: `id` and `rawName`; those attributes help you identify each value of the enumeration. Also, by default jCrystal generates the static method `getFromId` to help you get an enumeration value from an id (this could be a number or a string). 
 

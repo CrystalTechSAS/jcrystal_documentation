@@ -34,12 +34,12 @@ As an example, if an entity User has these attributes:
 - City
 - Favorite color
 
-Let's say that on the frontend you need to list all the users and show the name and last login; then, you don't need to receive all the attributes of the users, so the backend developer might say that the attributes Name and Last Login will comprise the "Min" level of the entity User; therefore, the generated interface UserMin.ts will contain only those attributes and methods to access and modify them. Additionally, the web service that gives you the list of all users on the frontend will return a list of the interface UserMin.
+Let's say that on the frontend you need to list all the users and show the name and last login; then, you don't need to receive all the attributes of the users, so the backend developer might say that the attributes Name and Last Login will comprise the "Min" level of the entity User; therefore, the generated interface `UserMin.ts` will contain only those attributes and methods to access and modify them. Additionally, the web service that gives you the list of all users on the frontend will return a list of the interface UserMin.
 
 **So how does this help you?** When you have a service that returns a list of the interface UserMin, then for each User you only will be able to access their attributes Name and Last Login. In this way, jCrystal helps you avoid common mistakes, when you try to access attributes that the entity doesn't have.
 
 ### Using an entity
-You can use the entity by accessing and modifying its attributes, for each attribute you will find two methods: `get<AttributeName>()` and `set<AttributeName>()`. 
+You can use the entity by accessing and modifying its attributes, for each attribute you will find two methods: `get<AttributeName>()` and `set<AttributeName>(...)`. 
 
 For example, if you have an object of the type UserMin, that we proposed earlier, you would find these methods available.
 
@@ -51,7 +51,7 @@ setLastLogin(lastLogin: CrystalDateMilis);
 getLastLogin() : CrystalDateMilis;
 ```
 
-To check what is a `CrystalDateMilis`, please read the next section.
+To check what is a `CrystalDateMilis`, please read the [next section](#crystal-dates).
 
 
 Also, you can cast an object of the type of an interface to the "main" class. Like this:
@@ -79,7 +79,7 @@ jCrystal has special classes to represent dates and times, they are generated on
 - `CrystalDateTime.ts`
 - `CrystalTime.ts`
 - `CrystalTimeMilis.ts`
-- `CrystalTimeSeconds`
+- `CrystalTimeSeconds.ts`
 
 The difference between them is the precision with which each one saves the date and time. As an example, `CrystalDateSeconds` takes into account the whole date and time with a precision of seconds, while `CrystalDateMilis` has a precision of milliseconds and `CrystalTime` only considers the time of the day and not the date. 
 
