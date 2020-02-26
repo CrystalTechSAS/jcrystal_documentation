@@ -74,7 +74,7 @@ Our beta allows you to write your backend in Java and deploy it over Google App 
 
 ### Frontend
 - [Angular 7](frontend/angular/general.md)
-- [Android](frontend/android/setup.md)
+- [Android](frontend/android/general.md)
 - [iOS](frontend/ios/setup.md)
 - [jQuery](clients/jQuery.md)
 
