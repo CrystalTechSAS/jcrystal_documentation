@@ -1,5 +1,6 @@
 # Angular 
-If you haven't already, please read [this guide](/getting_started/working_frontend.md). 
+If you haven't already, please read [this guide]({{'getting_started/working_frontend.html' | absolute_url }}). 
+
 
 Learn more about:
 - [How to setup your Angular app.](setup.md)
