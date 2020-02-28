@@ -32,3 +32,5 @@ jCrystal helps you build **frontend apps on top of your backend** (or any backen
 - **Simple access to the local database:** jCrystal saves stores and retrieves your information, no need to worry about your local database anymore. 
 
 jCrystal does this and more because it's a framework based on **code generators**. In this way, jCrystal reduces code re-write web and mobile applications by reusing backend side data structures, business logic, and web services to generate frontend equivalents.
+
+Recommended: https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1

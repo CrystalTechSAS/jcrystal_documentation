@@ -67,8 +67,8 @@ Our beta allows you to write your backend in Java and deploy it over Google App 
 
 <!--- - [General & Architecture](server/general.md) (optional)-->
 - [Web Services](server/webservices.md)
-- [Authentication  and Autorization](server/auth.md)
 - [Entities and DB access](server/entities.md)
+- [Authentication  and Autorization](server/auth.md)
 - [Async jobs, queues and crons](server/queues.md) (optional)
 <!-- - [General](server/clients/general.md) (Must read!!!) -->
 

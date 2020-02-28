@@ -98,6 +98,9 @@ The first approach is safer because by using the interface, you can only access 
 
 Coming soon :flushed: 
 
+## Background responses 
+Coming soon :flushed: 
+
 ## FAQ
 
 **How do you know if a web service is GET, POST, PUT or DELETE?**
