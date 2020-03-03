@@ -6,7 +6,7 @@ jCrystal is designed to easily create, expose and consume RESTful web services. 
 - There is currently no support for server-side views or features typical of a traditional server-side MVC framework.
 - We only support JSON responses, except for the web services that upload/download files. 
 
-What does this mean for you? This only means that when developing your backend you only have to focus on creating web services and entities; meanwhile, your clients (web, mobile, etc) will easily consume these web services thanks to the code generated from jCrystal. 
+What does this mean for you? This only means that when developing your backend you only have to focus on creating web services and entities; meanwhile, your clients (web, mobile, etc) will easily consume those web services thanks to the code generated from jCrystal. 
 
 ## Basics
 
@@ -21,24 +21,16 @@ public class ManagerTest {
 	}
 }
 ```
-This method is a GET web service:
+This method generates a GET web service:
 - It doesn't receive any query parameters, **just like the method** that defines it.
 - It returns a JSON with the text "Hello world from jCrystal!", **just like the method** that defines it.
-- The web service can be found in `/api/test/helloWorld`, **just like the method** that defines it is in the Manager**Test** and has **helloWorld** as the name.
+- The web service can be found in `/api/test/helloWorld`, **just like the method** that defines it is in the Manager**Test** class and has **helloWorld** as the name.
 
 As you can see, everything required to completely define your web service is inside this one simple method.
 
 But wait, where did you define the type of the web service and the route? Nowhere! jCrystal is a framework that uses the paradigm "convention over configuration", that's why by convention jCrystal:
 - Decides that this web service is an HTTP GET since the parameters don't include a POST entity or a file. 
 - Decides that the route is `/api/` plus the name of the class of the method without the word "Manager", in this case, `test/`; plus the name of the method, in this case, `helloWorld`.  So the final route is `/api/test/helloWorld`.
-
-Can you override those conventions? Yes, you can! Check the annotations @Path and @PathMethod. However, our suggestion is that you try to use the jCrystal conventions as much as you can since they will speed up your development.
-
-As explained previously, jCrystal uses each component of a method to define a web service:
-
-- The **parameters** of the method are the query parameters or the body of the web service. The names and types of your parameters will be the same used on the web services and on the code generated to consume this web service. 
-- The **value returned** by the method is the response of the web service. The type of the returned value is the same used on the code generated to consume this web service. 
-- By convention, the **method name**, **name of the class** where the method is defined and the **package where the class** are used to define the route of the web service. 
 
 Additionally, to be a web service, the method has to be:
 - **public static**.
@@ -48,25 +40,27 @@ Additionally, to be a web service, the method has to be:
 Therefore, the following method is also another valid web service:
 
 ```java
-package company.example.controllers.mobile.test; //Notice that the package has one folder named "controllers"
+package company.example.controllers.mobile.test; //The package has one folder named "controllers"
 
-public class ManagerTestHello {
-	public static String hello(String name) {
+public class ManagerTestHello { //The name of the class starts with "Manager"
+	public static String hello(String name) { //The method is public static
 		return "Hello, "+ name;
 	}
 }
 ```
 
-## Routes
-
 ## Parameters
+
+As explained previously, jCrystal uses each component of a method to define a web service. The **parameters** of the method are the query parameters or the body of the web service. 
+
+The names and types of your parameters will be the same used on the web service and on the code generated to consume this web service, so please choose clear and meaningful parameter names. 
 
 jCrystal supports several parameter types for your web services:
 
 - Native types and native object types (int, Integer, long, Long, boolean, Boolean, double, Double).
 - String.
-- CrystalDates* (Use them instead of any Date class).
 - Enumerations. 
+- [CrystalDates*](utils/crystal_dates.md) (Use them instead of any Date class).
 - Entities.
 - Post types.
 - Jsonify data transfer objects.
@@ -74,12 +68,14 @@ jCrystal supports several parameter types for your web services:
 
 ## Responses
 
+- The **value returned** by the method is the response of the web service. The type of the returned value is the same used on the code generated to consume this web service. 
+
 A web service can return:
 
 - Native types and native object types (int, Integer, long, Long, boolean, Boolean, double, Double)
 - String.
-- CrystalDates* (Use them instead of any Date class).
-- Enumerations. 
+- Enumerations.
+- [CrystalDates*](utils/crystal_dates.md) (Use them instead of any Date class).
 - Entities.
 - Post types.
 - Jsonify data transfer objects.
@@ -87,9 +83,14 @@ A web service can return:
 - Tuples of previous types.
 
 
+## Routes
+By convention, the **method name**, **name of the class** where the method is defined and the **package where the class** are used to define the route of the web service. 
+
 
 ## Simple examples
 
+## FAQ
+Can you override those conventions? Yes, you can! Check the annotations @Path and @PathMethod. However, our suggestion is that you try to use the jCrystal conventions as much as you can since they will speed up your development.
 
 ## Complex data upload
 
