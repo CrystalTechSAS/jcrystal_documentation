@@ -53,14 +53,7 @@ El método asserT se encuentra definido en el paquete `jcrystal.utils.ManagerUti
 
 
 ### Fecha y hora
-Para el manejo de eventos temporales _jCrystal_ no usa los objetos nativos de cada plataforma sino que implementa en cada una las siguientes clases de utilidad:
-- `CrystalDate`
-- `CrystalDateMilis`
-- `CrystalDateSeconds`
-- `CrystalDateTime`
-- `CrystalTime`
-- `CrystalTimeMilis`
-- `CrystalTimeSeconds`
+DONE
 
 ### Roles
 Solo puede haber uno en toda la aplicación.

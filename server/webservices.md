@@ -22,8 +22,8 @@ public class ManagerTest {
 }
 ```
 This method generates a GET web service:
-- It doesn't receive any query parameters, **just like the method** that defines it.
-- It returns a JSON with the text "Hello world from jCrystal!", **just like the method** that defines it.
+- It doesn't receive any query parameters, **just like the method** that defines it doesn't have any parameters.
+- It returns a JSON with the text "Hello world from jCrystal!", **just like the method** that defines it returns that String.
 - The web service can be found in `/api/test/helloWorld`, **just like the method** that defines it is in the Manager**Test** class and has **helloWorld** as the name.
 
 As you can see, everything required to completely define your web service is inside this one simple method.
@@ -49,9 +49,11 @@ public class ManagerTestHello { //The name of the class starts with "Manager"
 }
 ```
 
-## Parameters
+We'll know see how jCrystal uses each component of a method to define a web service.
 
-As explained previously, jCrystal uses each component of a method to define a web service. The **parameters** of the method are the query parameters or the body of the web service. 
+### Parameters
+
+The **parameters** of the method are the query parameters or the body of the web service. 
 
 The names and types of your parameters will be the same used on the web service and on the code generated to consume this web service, so please choose clear and meaningful parameter names. 
 
@@ -65,10 +67,13 @@ jCrystal supports several parameter types for your web services:
 - Post types.
 - Jsonify data transfer objects.
 - Arrays and lists of previous types.
+- FileUploadDescriptors.
+
+As you can see, jCrystal is made to help you code APIs faster, so on the backend you can forget about parameter parsing, you just declare de parameter on a method and that's it! :grin:
 
 ## Responses
 
-- The **value returned** by the method is the response of the web service. The type of the returned value is the same used on the code generated to consume this web service. 
+The **value returned** by the method is the response of the web service. The type of the returned value is the same used on the code generated to consume this web service. 
 
 A web service can return:
 
@@ -80,8 +85,8 @@ A web service can return:
 - Post types.
 - Jsonify data transfer objects.
 - Arrays and lists of previous types.
-- Tuples of previous types.
-
+- [Tuples of previous types.](utils/tuples.md)
+- FileDownloadDescriptors.
 
 ## Routes
 By convention, the **method name**, **name of the class** where the method is defined and the **package where the class** are used to define the route of the web service. 
@@ -90,7 +95,7 @@ By convention, the **method name**, **name of the class** where the method is de
 ## Simple examples
 
 ## FAQ
-Can you override those conventions? Yes, you can! Check the annotations @Path and @PathMethod. However, our suggestion is that you try to use the jCrystal conventions as much as you can since they will speed up your development.
+Can you override those conventions? Yes, you can! Check the annotations @Path and @PathMethod. However, we suggest that you try to use the jCrystal conventions as much as you can since they will speed up your development.
 
 ## Complex data upload
 
