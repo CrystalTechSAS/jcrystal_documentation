@@ -30,7 +30,7 @@ As you can see, everything required to completely define your web service is ins
 
 But wait, where did you define the type of the web service and the route? Nowhere! jCrystal is a framework that uses the paradigm "convention over configuration", that's why by convention jCrystal:
 - Decides that this web service is an HTTP GET since the parameters don't include a POST entity or a file. 
-- Decides that the route is  in the defined root of the web services (`/api` by default) plus the name of the class of the method without the word "Manager", in this case, `test/`; plus the name of the method, in this case, `helloWorld`.  So the final route is `/api/test/helloWorld`.
+- Decides that the route is the defined root of the web services (`/api` by default) plus the name of the class of the method without the word "Manager", in this case, `test/`; plus the name of the method, in this case, `helloWorld`.  So the final route is `/api/test/helloWorld`.
 
 Additionally, to be a web service, the method has to be:
 - **public static**.
@@ -49,7 +49,7 @@ public class ManagerTestHello { //The name of the class starts with "Manager"
 }
 ```
 
-We'll know see how jCrystal uses each component of a method to define a web service.
+We'll know see how jCrystal uses each component of a method to define a web service. If you want to see examples, jump to that section. 
 
 ### Parameters
 
@@ -91,9 +91,10 @@ A web service can return:
 Once again, you don't have to worry about parsing the response since jCrystal does this for you. 
 
 ### Routes
-The **method name**, **name of the class** where the method is defined and the **package where the class** are used to define the route of the web service. That's why jCrystal doesn't support **methods on the same class with the same name**. 
 
-The URL of each web service is built by adding these string elements to the  the defined root of the web services (`/api` by default):
+The **method name**, **name of the class** where the method is defined and the **package where the class is**, are used to define the route of the web service. That's why jCrystal doesn't support **methods on the same class with the same name**. 
+
+The URL of each web service is built by adding these string elements to the defined root of the web services (`/api` by default):
 
 - The name of the package after the folder `controllers` with each folder separated by `/`. As an example, if the controller is `company.example.controllers.mobile.test`, this string would be `mobile/test/`.
 -  The name of the class without the prefix `Manager`. As an example, if the controller is in the class `ManagerUser`, this string would be `user`.
@@ -111,36 +112,37 @@ public class ManagerUser {
 }
 ```
 
-Additionally, an underscore on any of the previous elements (name of the package, class or method) is transformed into an `/`. Therefore the next method has the route `/api/mobile/test/user/create/admin`
+Additionally, an underscore on any of the previous elements (name of the package, class or method) is transformed into an `/`. Therefore the next method has the route `/api/mobile/test/user/create/admin`:
 
 ```java
 package company.example.controllers.mobile.test; 
 
 public class ManagerUser {
 
-	public void create_admin() {
+	public static void create_admin() {
 		...
 	}
 }
 ```
 
-If you wish to override these conventions and define the route of any web service, check the next section.
+If you wish to override these conventions and define the route of any web service, you can do it by using the annotation @Path on the method, which receives the string of your desired path. As an example, the route for the next method is `/user`:
 
-## Annotations
+```java
+package company.example.controllers.mobile.test; 
 
+public class ManagerUser {
+
+	@Path("/user")
+	public static void createUser(...) {
+		...
+	}
+}
+```
 
 ## Simple examples
 
+
+
 ## FAQ
+
 Can you override those conventions? Yes, you can! Check the annotations @Path and @PathMethod. However, we suggest that you try to use the jCrystal conventions as much as you can since they will speed up your development.
-
-## Complex data upload
-
-## File uploads
-
-```java
-public static void A(FileUploadDescriptor desc) throws Exception{
-	desc.put("bucket", "nombre.txt");
-	
-}
-```
