@@ -66,7 +66,7 @@ An entity field is a **private static** attribute annotated with `@jcrystal.refl
 - FirebaseAccount. 
 - [Enums](enums.md)
 
-Entre los métodos que genera JCrystal para los campos están los _getters_ y los _setters_ de cada uno de los campos.
+jCrystal generates the _get_ and _set_ methods of each entity field. 
 
 Para que un campo sea __requerido en el constructor__, su especificación debe especificar con la palabra clave _final_.
 

@@ -15,13 +15,14 @@ private static Password password;
 ```
 
 # FirebaseAccount
+This class is used to describe a field that contains a [Firebase account](https://firebase.google.com/docs/auth). In this way, you can log in a user through Firebase and save the account information on an entity.
 
-This class is used to decribe that an entity field is a firebase account. In this way, 
 Usage:
-
 ```java
 import jcrystal.entity.types.security.FirebaseAccount;
 ...
 @EntityProperty
 private static FirebaseAccount firebaseId;
 ```
+
+If you want to learn more about using this class, please check [here](../auth.md).
