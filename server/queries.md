@@ -2,13 +2,7 @@
 
 ## Overview
 
-The jCrystal entity system allows you to create queries over entity properties. The are two types of entity queries:
-
-- Owner key based
-- Single field based
-- Compound Index based queries
-
-To access do an Entity query you must use the inner type Query:
+To do an Entity query you must use the inner type Query:
 
 ```java
 YourEntity.Query
@@ -23,6 +17,12 @@ Following you can add query customizations:
 ```java
 YourEntity.Query.limit(100).txn()
 ```
+
+The jCrystal entity system allows you to create queries over entity properties. The are three types of entity queries:
+
+- Owner key based
+- Single field based
+- Compound Index based queries
 
 ## Owner key based
 
