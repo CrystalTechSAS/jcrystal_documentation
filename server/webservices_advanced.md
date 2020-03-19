@@ -9,6 +9,6 @@ public static void A(FileUploadDescriptor desc) throws Exception{
 
 # Setup the type of method
 
-# Set the normal type on each method
+# Json Level of the method
 @JsonNormal
 @JsonBasic

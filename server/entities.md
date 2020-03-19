@@ -68,18 +68,19 @@ An entity field is a **private static** attribute annotated with `@jcrystal.refl
 
 jCrystal generates the _get_ and _set_ methods of each entity field. 
 
-Para que un campo sea __requerido en el constructor__, su especificación debe especificar con la palabra clave _final_.
+In order **to require a field on the constructor** of the entity, the entity field must be declared with the final word **final**. 
 
-La anotación `@jcrystal.reflection.annotations.EntityProperty` tiene los siguientes parámetros.
-- _name_ (String): nombre interno que se usara para el campo el la tabla del Datastore.
+
+The annotation `@jcrystal.reflection.annotations.EntityProperty` has these parameters:
+- _name_ (String): the name that will be internally used in the Datastore table. If you don't set this value, then the name of the field will be used.
 - _index_ (IndexType): Defines the type of index applied on this field. Can take the following values:
 	- NONE: No index applies to this field
 	- MULTIPLE: The most simple type of index. The field is indexed and a query over a value this field can retrieve multiple entities.
 	- UNIQUE: The field is indexed and a query over a value this field shoud retrieve only one entity. You must ensure each field value only has one entity.
 	- UNIQUE_VERIFICATION: Like UNIQUE but jCrystal will valide the uniqueness and throw an exception if the validation failed.
 - _editable_: If set to false, this property will never be modified by a post update. 
-- _level_
-- _autoNow_ (booleano): aplicable solo a los parámetros de tipos CrystalDate*, indica si estos se inicializan automáticamente con el tiempo actual.
+- _json_(JsonLevel): The  level of access of the entity field. 
+- _autoNow_ (boolean): This attribute is only allowed on entity fields of type CrystalDate*, it indicates if this field will be automatically initialized with the time of the creation of the entity. 
 
 \*We suggest to declare each field as `private` to avoid confussions.
 

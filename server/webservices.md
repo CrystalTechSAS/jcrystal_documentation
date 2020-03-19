@@ -145,4 +145,6 @@ public class ManagerUser {
 
 ## FAQ
 
-Can you override those conventions? Yes, you can! Check the annotations @Path and @PathMethod. However, we suggest that you try to use the jCrystal conventions as much as you can since they will speed up your development.
+Can you override those conventions? 
+
+Yes, you can! Check the annotations @Path and @PathMethod. However, we suggest that you try to use the jCrystal conventions as much as you can since they will speed up your development.
