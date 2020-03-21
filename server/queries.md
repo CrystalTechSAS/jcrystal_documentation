@@ -20,11 +20,12 @@ YourEntity.Query.limit(100).txn()
 
 The jCrystal entity system allows you to create queries over entity properties. The are three types of entity queries:
 
-- Owner key based
+- Primary key based
 - Single field based
 - Compound Index based queries
+- Full search queries (TBD)
 
-## Owner key based
+## Primary key based
 
 TBD
 
@@ -35,7 +36,6 @@ Single field queries allows you to filter entities by single property values. Yo
 To enable single field queries you must add `index = IndexType.MULTIPLE` on `@EntityProperty` for the field you want to query. The following index:
 
 ```java
-@jcrystal.reflection.annotations.jEntity
 public class User {
 	
 	@EntityProperty(index = IndexType.MULTIPLE)
@@ -47,15 +47,13 @@ public class User {
 Enables the following query:
 
 ```java
-User.Query.name("simple name")
+User.Query.name("Bob")
+// Retrieves a list of Users with Bob as name.
 ```
-
-which retrieves a list of Users with the given name.
 
 On sortable types like dates you can query on ranges:
 
 ```java
-@jcrystal.reflection.annotations.jEntity
 public class User {
 	
 	@EntityProperty(indexed = IndexType.MULTIPLE)
@@ -68,9 +66,8 @@ Enabling the following query:
 
 ```java
 User.Query.creationTime(new CrystalMonth().toDate(), new CrystalMonth().next().toDate())
+// Retrieves a list of Users created on current month.
 ```
-
-which retrieves a list of Users created on current month.
 
 ### Index Types
 
@@ -78,12 +75,42 @@ You can use one of the following Index Types:
 
 - IndexType.MULTIPLE: which retrieves a list of entities for each index value.
 - IndexType.UNIQUE: which retrieves a single entity for each index value. jCrystal supposes that your will ensure each index value will have at most 1 entity.
-- IndexType.UNIQUE_CHECK (TBS): which retrieves a single entity for each index value. jCrystal will check every put on this index an throw an Exception if a collision occurs.
+- IndexType.UNIQUE_CHECK (TBS): which retrieves a single entity for each index value. jCrystal will check every put on this index an throw an Exception if a collision is detected.
 
 ## - Compound Index based queries
-Como se indico previamente, las propiedades de una entidad pueden estar indexadas, en la caso de las propiedades de manera optativa y en el de las relaciones de manera automática.
 
-Sin embargo, en algunos casos se necesita buscar registros no por el valor de un campo sino por la combinación de valores de varios campos, en estos casos la clase de la entidad se anota con `@EntityIndex` con los siguientes parámetros:
-- _name_: nombre cual el cual se referirá
-- _value_: Un arreglo de String con los nombres internos de los campos incluidos en el índice.
+You can make complex queries by defining special indexes. A special index can be defined over each enity using the `@_Entity_Index` annotation. This annotation recieves two params:
+- name: The index name
+- fields: An array with the fields that compose the index.
+
+The next snippet shows how to create a compound index for User:
+
+```java
+@UserIndex(name = "byNameCreation", fields = {F.name, F.creation})
+public class User {
+	
+	@EntityProperty(index = IndexType.MULTIPLE)
+	private static String name;
+
+	@EntityProperty(indexed = IndexType.MULTIPLE)
+	private static CreationTimestamp creationTime;
+
+}
+```
+
+This index enables you to query users with a a given name and a creation time:
+
+```java
+User.Query.byNameCreation("Bob", new CrystalDateTime().toDate())
+// Retrieves a list of users named Bob which has been created on a specific millisecond
+```
+
+You can also make range queries:
+
+```java
+User.Query.byNameCreation("Bob", new CrystalMonth().toDate(), new CrystalMonth().next().toDate())
+// Retrieves a list of users named Bob which has been created on current month
+```
+
+> :warning: **Only indexed properties can be used on compound index definitions**
 
