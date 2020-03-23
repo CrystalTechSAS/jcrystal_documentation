@@ -30,7 +30,7 @@ Include the following dependencies using npm:
 
 ```
 npm install moment --save
-npm install sweetalert2 --s ave
+npm install sweetalert2 -- save
 ```
 If you use a different package manager, please check how to add these dependencies on these websites: 
 - [moment.js](https://momentjs.com/)
