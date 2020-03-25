@@ -66,7 +66,7 @@ An entity field is a **private static** attribute annotated with `@jcrystal.refl
 - FirebaseAccount. 
 - [Enums](enums.md)
 
-jCrystal generates the _get_ and _set_ methods of each entity field. 
+After you define an entity property and run the jCrystal generator with  `CTRL + 6` (Windows) or `CMD + 6` (Mac OS), jCrystal will generate the _get_ and _set_ methods for each entity field. 
 
 In order **to require a field on the constructor** of the entity, the entity field must be declared with the final word **final**. 
 
@@ -79,46 +79,33 @@ The annotation `@jcrystal.reflection.annotations.EntityProperty` has these param
 	- UNIQUE: The field is indexed and a query over a value this field shoud retrieve only one entity. You must ensure each field value only has one entity.
 	- UNIQUE_VERIFICATION: Like UNIQUE but jCrystal will valide the uniqueness and throw an exception if the validation failed.
 - _editable_: If set to false, this property will never be modified by a post update. 
-- _json_(JsonLevel): The  level of access of the entity field. 
+- _json_(JsonLevel): The level of access of the entity field. If not set, the default level of an entity property is `JsonLevel.NORMAL`. [Learn more](utils/access_levels).
 - _autoNow_ (boolean): This attribute is only allowed on entity fields of type CrystalDate*, it indicates if this field will be automatically initialized with the time of the creation of the entity. 
 
 \*We suggest to declare each field as `private` to avoid confussions.
 
-### Niveles de acceso
-Los campos de una entidad pueden tener niveles de detalle que especifican subconjuntos de campos con los que se puede presentar el objeto.  Un nivel de detalle incluye  todos los niveles inferiores, p.e: si se pide un objeto con nivel de detalle NORMAL, este incluirá también los campos con nivel MIN y BASIC.
-
-Estos son los niveles posibles en **orden**, especificados en el _enum_ `jcrystal.json.JsonLevel`; a saber:
-- MIN
-- BASIC
-- NORMAL: el nivel de acceso por defecto
-- DETAIL
-- FULL
-Además hay tres niveles especiales.
-- NONE: Indica que el campo no se debe incluir en ninguna presentación del objeto.
-- ID: solo el identificador.
-- TOSTRING: el identificador y el resultado del método `toString()` de la entidad.
-- DEFAULT: **No debe usarse**, lo usa JCrystal internamente.
-
-En el caso de las propiedades el nombre del parámetro es _json_, en el de las relaciones _keyLevel_.
-
-_Nota:_ estos niveles de acceso se usan de manera paralela en los servicios.
-
 ## Entity relationships
 
-Las relaciones son campos de una entidad que la asocian con otra, pueden ser '1 a 1', 'muchos a muchos' o 'muchos a 1', estos campos se denotan con las siguientes anotaciones [todas del paquete `jcrystal.reflection.annotations.entities`]:
-- `@Rel1to1`
-- `@RelMto1`
-- `@RelMtoM`
+Relationships are fields in an entity that associate them with another entity. A relationship can be one of these types: 'one-to-one', 'many-to-one' or 'many-to-many' and is denoted with a corresponding annotation:
 
-Todas comparten los mismos parámetros:
-- _name_(String): equivalente al parámetro del mismo nombre en las propiedades
-- _target_(String): nombre del pseudo-campo que se creara en la entidad referida con la relación inversa.
-- _keyLevel_: equivalente al parámetro _json_ en las propiedades
-- _editable_(boolean): equivalente al parámetro del mismo nombre en las propiedades
+- `@Rel1to1`: Represents a one to one relationship. 
+- `@RelMto1`: Represents a many to one relationship.
+- `@RelMtoM`: Represents a many to many relationships
 
-Los campos de relación, son indexados automáticamente y por tanto no tienen la opción _indexed_.
+Note: All of these annotations are inside the package `jcrystal.reflection.annotations.entities`.
 
-Los campos de relación no tienen nivel por defecto.
+All the relationship annotations have these parameters:
+- _target_(String): the name of the pseudo-field that will be created in the referred entity with the inverse relation.
+- _keyLevel_(JsonLevel): The level of access of the entity field. There is no default level for a relationship field. [Learn more](utils/access_levels).
+
+The annotations `@Rel1to1` and `@RelMto1` have this additional parameter:
+- _name_(String): the name that will be internally used in the Datastore table. If you don't set this value, then the name of the field will be used.
+
+Additionally, the annotation `@RelMtoM` has these additional parameters:
+- _small_(boolean): indicates whether the size of this side of the relationship is small.
+- _value_(String): the name that will be internally used in the Datastore table. This value must be set. 
+
+Relationship fields are automatically indexed and therefore do not have the _index_ option.
 
 # Using entites on WSs
 
@@ -131,8 +118,6 @@ public static Tupla2<List<Project>, List<ProjectKey>> A(Project.Post.Basic asd, 
 ```
 
 # [jCrystal queries](queries.md)
-
-##### Niveles de detalle
 
 
 
@@ -200,5 +185,4 @@ Pregunta: valor por defecto?
 
 indexAsProperty Poder hacer consultas.
 
-Key --> Autogeneradas
-        - Compuestas
+## Examples
