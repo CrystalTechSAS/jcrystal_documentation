@@ -77,11 +77,12 @@ You can use one of the following Index Types:
 - IndexType.UNIQUE: which retrieves a single entity for each index value. jCrystal supposes that your will ensure each index value will have at most 1 entity.
 - IndexType.UNIQUE_CHECK (TBS): which retrieves a single entity for each index value. jCrystal will check every put on this index an throw an Exception if a collision is detected.
 
-## - Compound Index based queries
+## Compound Index based queries
 
 You can make complex queries by defining special indexes. A special index can be defined over each enity using the `@_Entity_Index` annotation. This annotation recieves two params:
 - name: The index name
 - fields: An array with the fields that compose the index.
+> :warning: **Only indexed properties can be used on compound index definitions**
 
 The next snippet shows how to create a compound index for User:
 
@@ -111,6 +112,4 @@ You can also make range queries:
 User.Query.byNameCreation("Bob", new CrystalMonth().toDate(), new CrystalMonth().next().toDate())
 // Retrieves a list of users named Bob which has been created on current month
 ```
-
-> :warning: **Only indexed properties can be used on compound index definitions**
 
